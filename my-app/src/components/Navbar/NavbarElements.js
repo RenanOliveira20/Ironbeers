@@ -28,6 +28,24 @@ export const NavLink = styled(Link)`
   }
 `;
 
+export const Button = styled.button`
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 3px 15px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  margin-left: 0px;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
+`;
+
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;

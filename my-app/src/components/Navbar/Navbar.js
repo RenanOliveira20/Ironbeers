@@ -7,6 +7,7 @@ import {
   NavBtn,
   NavBtnLink,
   Img,
+  Button,
 } from "./NavbarElements";
 import logo from '../../images/logo.png'
 
@@ -15,22 +16,12 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLink to="/">
-          <Img src={logo} alt="logo" activeStyle />
+          <Img to="/" src={logo} alt="logo"/>
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to="/about" activeStyle>
-            About
-          </NavLink>
-          <NavLink to="/services" activeStyle>
-            Services
-          </NavLink>
-          <NavLink to="/contact-us" activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            Sign Up
-          </NavLink>
+          <input type="search" placeholder="Search" aria-label="Search"/>
+          <Button type="submit" >Search</Button>
         </NavMenu>
         <NavBtn>
           <NavBtnLink to="/signin">Sign In</NavBtnLink>
