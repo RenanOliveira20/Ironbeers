@@ -1,0 +1,44 @@
+{
+    "beers": [
+        {
+            "name": "Skol",
+            "image":"https://courier-images-prod.imgix.net/produc_variant/00008725_c431fbf8-5f01-4a90-aaa1-a06cff9306e8.jpg?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2",
+            "price": 2.49,
+            "liters" : "300ml",
+            "id": "b0",
+            "quantity": 0
+        },
+        {
+           " name":"Skol",
+            "image": "https://courier-images-prod.imgix.net/produc_variant/00008502_8df6cda6-722b-4523-9afd-bb518ec1efb1.jpg?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2",
+            "price": 2.19,
+            "liters" : "269ml",
+            "id": "b1",
+            "quantity": 0
+        },
+        {
+            "name": "Skol",
+            "image": "https://courier-images-prod.imgix.net/produc_variant/00008508_6827c5ed-1390-4438-b43e-5f671ffa930c.jpg?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2",
+            "price": 2.19,
+            "liters" : "473ml",
+            "id": "b3",
+            "quantity": 0
+        },
+        {
+            "name": "Skol Puro Malte",
+            "image" : "https://courier-images-prod.imgix.net/produc_variant/00009466_08d9ac90-6106-465a-af06-10a465e255a9.jpg?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2",
+            "price": 2.29,
+            "liters" : "269ml",
+            "id": "b4",
+            "quantity": 0
+        },
+        {
+           " name": "Budweiser",
+            "image": "https://courier-images-prod.imgix.net/produc_variant/00008579_dfcca1fc-3364-4927-bcd6-d514c73ce88b.jpg?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2",
+            "price": 3.79,
+            "liters" : "350ml",
+            "id": "b5",
+            "quantity": 0
+        }
+    ]
+}
