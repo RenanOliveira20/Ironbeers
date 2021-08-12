@@ -1,4 +1,4 @@
-import { FaBars } from "react-icons/fa";
+import { BiCart } from "react-icons/bi";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 `;
 
 export const Img = styled.img`
-  height: 80px;
+  height: 70px;
   display: flex;  
 `;
 export const NavLink = styled(Link)`
@@ -46,17 +46,13 @@ export const Button = styled.button`
   }
 `;
 
-export const Bars = styled(FaBars)`
-  display: none;
+export const Bars = styled(BiCart)`
   color: #fff;
+  width: 50px;
+  height: 60px;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
+    
   }
 `;
 
