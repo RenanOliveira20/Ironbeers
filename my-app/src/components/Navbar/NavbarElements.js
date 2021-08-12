@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 `;
 
 export const Img = styled.img`
-  height: 80px;
+  height: 70px;
   display: flex;  
 `;
 export const NavLink = styled(Link)`
@@ -48,9 +48,9 @@ export const Button = styled.button`
 
 export const Bars = styled(BiCart)`
   color: #fff;
-  width: 100px;
-  height: 70px;
-  border: 1px solid red;
+  width: 50px;
+  height: 60px;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     
   }
