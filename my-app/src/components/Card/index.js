@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BiCart } from "react-icons/bi"
 import './style.css'
 
 class Card extends Component {
@@ -12,7 +13,7 @@ class Card extends Component {
         return (
             <div className='card-component'>
                 <div className="card-image">
-                    <img src={this.state.data.image} alt="beer image" />
+                    <img src={this.state.data.image} alt="beer image"/>
                 </div>
                 <div className = 'price-cart'>
                     <div>
@@ -21,7 +22,7 @@ class Card extends Component {
                             R$ {this.state.data.price}
                         </p>
                     </div>
-                    <button>+</button>
+                    <button><BiCart/></button>
                 </div>
 
             </div>
