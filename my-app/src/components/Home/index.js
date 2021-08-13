@@ -23,7 +23,7 @@ class Home extends Component {
                 <div className='carrousel'>
                 {
                     this.state.dados.map((e , i) =>{
-                        if(i < 3){
+                        if(i < 4){
                         return <Card key={e.id} data = {e}/>
                     }
                     })
