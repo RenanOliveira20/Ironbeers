@@ -10,6 +10,7 @@ import {
   Button,
 
 } from "./NavbarElements";
+import { Link } from "react-router-dom";
 import logo from '../../images/logo.png'
 
 const Navbar = () => {
@@ -24,7 +25,9 @@ const Navbar = () => {
           <Button type="submit" >Search</Button>
         </NavMenu>
         <navMenu>
+        <Link to="/cart">
         <Bars/> 
+        </Link>
         </navMenu>
         <NavBtn>
           <NavBtnLink to="/signin">Sign In</NavBtnLink>

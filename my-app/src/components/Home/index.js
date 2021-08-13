@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import Card from '../Card';
-import Navbar from '../Navbar/Navbar'
 import './style.css'
 
 class Home extends Component {
@@ -18,7 +17,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
 
                 <div className='carrousel'>
                 {
