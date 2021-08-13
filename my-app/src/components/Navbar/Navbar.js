@@ -24,11 +24,9 @@ const Navbar = () => {
           <input type="search" placeholder="Search" aria-label="Search"/>
           <Button type="submit" >Search</Button>
         </NavMenu>
-        <navMenu>
         <Link to="/cart">
         <Bars/> 
-        </Link>
-        </navMenu>
+        </Link>       
         <NavBtn>
           <NavBtnLink to="/signin">Sign In</NavBtnLink>
         </NavBtn>
