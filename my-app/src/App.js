@@ -11,20 +11,20 @@ class App extends Component{
   state = {
     dados:[]
 }
-componentDidMount(){
-    axios.get('http://localhost:8000/beers').then((response) => {
+componentDidMount = async () =>
+   await axios.get('http://localhost:8000/beers').then((response) => {
         this.setState({
             dados: response.data
         })
     })
-}
+
   render() {
   return (
     <div>
     <Navbar/>
       <Switch>
         <Route exact path ='/' component= {Home}/>
-        <Route path = '/cart' component= {Cart}/>
+        <Route path = '/cart' render={(props) => (<Cart {...props} data = {this.state.dados}/>)} />
       </Switch>
     </div>
   );

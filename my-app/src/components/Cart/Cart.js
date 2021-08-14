@@ -6,7 +6,7 @@ class Cart extends React.Component {
         return (
             <div>
                 <ul>
-               <List/>     
+               <List data = {this.props.data}/>     
                 </ul>
             </div>
         );

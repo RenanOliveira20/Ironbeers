@@ -1,15 +1,29 @@
-import React from 'react'
+import React, {Component} from 'react'
+import {
+    Div,
+    Li,
+    Img,
+    Span,
+    Trash,
+  } from "./ListElements.js";
+class List extends Component {
 
-function List() {
+    render(){
     return (
-        <li className= 'list'>
-            <img></img>
-            <span>oi</span>
-            <span></span>
-            <span></span>
-            <input></input>
-        </li>
+        <>
+        <Li>
+        <Div>
+            <Img src={this.props.data[0].image} alt= {this.props.data.name}/>
+            <Span>{this.props.data[0].name}</Span>   
+            <Span>R$ {this.props.data[0].price}</Span>
+            <Span>{this.props.data[0].quantity}</Span>
+            <input></input>            
+        </Div>
+        <Trash/>
+        </Li>
+        </>
     )
+}
 }
 
 export default List
