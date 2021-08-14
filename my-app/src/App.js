@@ -3,17 +3,28 @@ import './App.css';
 import  'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
+import Cart from './components/Cart/Cart';
+import Navbar from './components/Navbar/Navbar';
+import axios from 'axios';
+class App extends Component{
+  
+  state = {
+    dados:[]
+}
+componentDidMount = async () =>
+   await axios.get('http://localhost:8000/beers').then((response) => {
+        this.setState({
+            dados: response.data
+        })
+    })
 
-import SingleCard from './components/SingleCard';
-import Nav from './components/Navbar/Navbar'
-
-function App() {
+  render() {
   return (
-    <div className="App">
-      <Nav/>
+    <div>
+    <Navbar/>
       <Switch>
         <Route exact path ='/' component= {Home}/>
-        <Route path= '/single-beer/:id' component = {SingleCard} />
+        <Route path = '/cart' render={(props) => (<Cart {...props} data = {this.state.dados}/>)} />
       </Switch>
     </div>
   );
