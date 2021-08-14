@@ -1,7 +1,9 @@
+import React, {Component} from 'react';
 import './App.css';
 import  'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
+
 import SingleCard from './components/SingleCard';
 import Nav from './components/Navbar/Navbar'
 
@@ -15,6 +17,7 @@ function App() {
       </Switch>
     </div>
   );
+  }
 }
 
 export default App;
