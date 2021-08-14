@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BiCart } from "react-icons/bi"
 import './style.css'
+import { Link } from 'react-router-dom';
 
 class Card extends Component {
     constructor(props) {
@@ -10,21 +12,23 @@ class Card extends Component {
     }
     render() {
         return (
-            <div >
-                <div className="card-image">
-                    <img src={this.state.data.image} alt="beer image" />
-                </div>
-                <div className = 'price-cart'>
-                    <div>
-                        <p>
-                            {this.state.data.name} {this.state.data.liters} <br></br>
-                            R$ {this.state.data.price}
-                        </p>
+            <Link to={`/single-beer/${this.state.data.id}`} className='card-component'>
+                <div >
+                    <div className="card-image">
+                        <img src={this.state.data.image} alt="beer image" />
                     </div>
-                    <button>+</button>
-                </div>
+                    <div className='price-cart'>
+                        <div>
+                            <p>
+                                {this.state.data.name} {this.state.data.liters} <br></br>
+                                R$ {this.state.data.price}
+                            </p>
+                        </div>
+                        <button><BiCart /></button>
+                    </div>
 
-            </div>
+                </div>
+            </Link>
         );
     }
 }
