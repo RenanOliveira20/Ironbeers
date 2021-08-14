@@ -33,7 +33,7 @@ class Home extends Component {
                 <Nav action= {this.handleOnSearch}/>
                 <div className='carrousel'>
                     {
-                        this.state.filtered.map((e, i) => {
+                        this.state.filtered .map((e, i) => {
                            
                                 return (
                                     <Card key={e.id} data={e} />
