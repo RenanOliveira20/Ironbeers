@@ -1,13 +1,15 @@
+import React, {Component} from 'react';
 import './App.css';
 import  'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Cart from './components/Cart/Cart';
 import Navbar from './components/Navbar/Navbar';
-
-function App() {
+class App extends Component{
+  
+  render() {
   return (
-    <div className="App">
+    <div>
     <Navbar/>
       <Switch>
         <Route exact path ='/' component= {Home}/>
@@ -15,6 +17,7 @@ function App() {
       </Switch>
     </div>
   );
+  }
 }
 
 export default App;
