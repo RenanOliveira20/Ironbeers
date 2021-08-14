@@ -10,7 +10,7 @@ class Card extends Component {
     }
     render() {
         return (
-            <div className='card-component'>
+            <div >
                 <div className="card-image">
                     <img src={this.state.data.image} alt="beer image" />
                 </div>

@@ -1,46 +1,9 @@
 .card-component{
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 200px;
-    flex-direction: column;
+    width: 20%;
     background-color: black;
 }
-.card-image{
-    position: relative;
+.card-component >div >div >img {
     margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    width:50%;
-    height: 50%
-}
-.card-component > div > img{
-    width: auto;
+    width: 25%;
     height: auto;
-}
-.card-component > div > div > p {
-    margin-top: 10px;
-    color: yellow;
-}
-.price-cart{
-    width: 100%;
-    display: flex;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
-}
-.price-cart > div {
-    width: 70%;
-}
-.price-cart > button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px ;
-    background-color: yellow;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    padding: 5px;
-
 }
