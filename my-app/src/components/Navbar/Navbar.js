@@ -13,15 +13,27 @@ import {
 import { Link } from "react-router-dom";
 import logo from '../../images/logo.png'
 
-const Navbar = () => {
-  return (
-    <>
+class Navbar extends React.Component {
+  state = {
+    value:''
+  }
+  handleSearch= async (event) => {
+    await this.setState({
+      value: event.target.value
+    })  
+    this.props.action(this.state.value)
+  }
+
+  render(){
+
+    return (
+      <>
       <Nav>
         <NavLink to="/">
           <Img to="/" src={logo} alt="logo"/>
         </NavLink>
         <NavMenu>
-          <input type="search" placeholder="Search" aria-label="Search"/>
+          <input type="search" placeholder="Search" aria-label="Search" value ={this.state.value} onChange = {this.handleSearch} />
           <Button type="submit" >Search</Button>
         </NavMenu>
         <Link to="/cart">
@@ -33,6 +45,7 @@ const Navbar = () => {
       </Nav>
     </>
   );
+}
 };
 
 export default Navbar;

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { BiCart } from 'react-icons/bi';
+import  Nav from '../Navbar/Navbar';
 import './style.css'
 
 class SingleCard extends Component {
@@ -21,6 +22,7 @@ class SingleCard extends Component {
     render() {
         return (
             <div >
+                <Nav/>
                 <div className='single-card'>
                     <div>
                         <img src={this.state.data.image} />
@@ -38,7 +40,7 @@ class SingleCard extends Component {
                     <span>R$ 0</span>
                     </div>
                     <div>
-                    Quantity <br></br>
+                    <span></span>Quantity <br></br>
                     <span> 0 </span>
                     </div>
                    
