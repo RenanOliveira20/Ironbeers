@@ -5,8 +5,19 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Cart from './components/Cart/Cart';
 import Navbar from './components/Navbar/Navbar';
+import axios from 'axios';
 class App extends Component{
   
+  state = {
+    dados:[]
+}
+componentDidMount(){
+    axios.get('http://localhost:8000/beers').then((response) => {
+        this.setState({
+            dados: response.data
+        })
+    })
+}
   render() {
   return (
     <div>
