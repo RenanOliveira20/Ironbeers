@@ -1,0 +1,55 @@
+.single-card{
+    width :90%;
+    background-color: black;
+    margin: 20px 5% 20px 5%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0 
+}
+.single-card > div{
+    width: 50%;
+}
+.single-card > div > img {
+    height:300px ;
+}
+.right{
+    background-color: white;
+    margin-right: 2%;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer-single-card{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-single-card >div {
+    background-color: black;
+    width: 25%;
+    color: white;
+    padding: 10px;
+    border-radius:15px ;
+    font-size:20px ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.footer-single-card > div > span {
+    width:40%;
+    background-color: white;
+    color: black;
+    width: auto;
+    border-radius: 10px;
+}
+.footer-single-card > button {
+    font-size: 25px;
+    width: 30%;
+    padding: 10px;
+    background-color: #256ce1;
+    color: white;
+    border-top-left-radius:15px ;
+    border-end-end-radius: 15px;
+}

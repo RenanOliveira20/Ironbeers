@@ -5,9 +5,9 @@ import './style.css'
 
 class Home extends Component {
     state = {
-        dados:[]
+        dados: []
     }
-    componentDidMount(){
+    componentDidMount() {
         axios.get('http://localhost:8000/beers').then((response) => {
             this.setState({
                 dados: response.data
@@ -19,13 +19,15 @@ class Home extends Component {
             <div>
 
                 <div className='carrousel'>
-                {
-                    this.state.dados.map((e , i) =>{
-                        if(i < 4){
-                        return <Card key={e.id} data = {e}/>
+                    {
+                        this.state.dados.map((e, i) => {
+                            if (i < 4) {
+                                return (
+                                    <Card key={e.id} data={e} />
+                                )
+                            }
+                        })
                     }
-                    })
-                }
                 </div>
             </div>
         );
