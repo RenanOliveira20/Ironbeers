@@ -15,7 +15,7 @@ class Card extends Component {
             <Link to={`/single-beer/${this.state.data.id}`} className='card-component'>
                 <div >
                     <div className="card-image">
-                        <img src={this.state.data.image} alt="beer image" />
+                        <img src={this.state.data.image} alt={this.state.data.name} />
                     </div>
                     <div className='price-cart'>
                         <div>
