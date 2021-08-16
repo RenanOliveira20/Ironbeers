@@ -1,21 +1,21 @@
-import axios from 'axios';
 import React, { Component } from 'react';
 import Card from '../Card';
 import  Nav from '../Navbar/Navbar';
 import './style.css'
-
+import apiBeers from '../../api/api';
 class Home extends Component {
     state = {
         dados: [],
         filtered: []
     }
     componentDidMount() {
-        axios.get('http://localhost:8000/beers').then((response) => {
+        apiBeers.getBeers().then((response) => {
             this.setState({
                 dados: response.data,
                 filtered:response.data
             })
         })
+
     }
     handleOnSearch = (value)=>{
         let copyArray= this.state.dados;

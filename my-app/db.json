@@ -32,5 +32,22 @@
             "quantity": 0,
             "id": 2
         }
+    ],
+    "users": [
+        {
+            "id": 0,
+            "username": "Jhonatan",
+            "password": "1234",
+            "cart": [
+                {
+                    "beerId": 0,
+                    "quantity": 2
+                }
+            ]
+
+        }
     ]
+    
+
+    
 }

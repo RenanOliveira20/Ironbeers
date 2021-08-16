@@ -18,7 +18,7 @@ class List extends Component {
             <Span>{this.props.data[0].name}</Span>   
             <Span>R$ {this.props.data[0].price}</Span>
             <Span>{this.props.data[0].quantity}</Span>
-            <Input type="number" min="0"/>            
+            <Input type="number" min="0"/>          
         </Div>
         <Trash/>
         </Li>

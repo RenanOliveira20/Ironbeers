@@ -5,19 +5,23 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Cart from './components/Cart/Cart';
 import SingleCard from './components/SingleCard';
-import axios from 'axios';
+import apiBeers from './api/api';
 
 class App extends React.Component{
   
   state = {
     dados:[]
 }
-componentDidMount = async () =>
-   await axios.get('http://localhost:8000/beers').then((response) => {
-        this.setState({
-            dados: response.data
-        })
-    })
+
+componentDidMount() {
+  apiBeers.getBeers().then((response) => {
+      this.setState({
+          dados: response.data,
+          filtered:response.data
+      })
+  })
+  
+}
 
   render() {
   return (
