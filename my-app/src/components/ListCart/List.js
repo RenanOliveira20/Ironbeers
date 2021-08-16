@@ -5,6 +5,7 @@ import {
     Img,
     Span,
     Trash,
+    Input
   } from "./ListElements.js";
 class List extends Component {
 
@@ -17,7 +18,7 @@ class List extends Component {
             <Span>{this.props.data[0].name}</Span>   
             <Span>R$ {this.props.data[0].price}</Span>
             <Span>{this.props.data[0].quantity}</Span>
-            <input></input>            
+            <Input type="number" min="0"/>            
         </Div>
         <Trash/>
         </Li>
