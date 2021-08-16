@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { BiCart } from "react-icons/bi"
-import './style.css'
-import { Link } from 'react-router-dom';
+import {
+    DrinkImg,
+    CardComponent,
+    CardLink,
+    CardPrice,
+    Price,
+    CartButton
+} from './card'
 
 class Card extends Component {
     constructor(props) {
@@ -12,23 +18,18 @@ class Card extends Component {
     }
     render() {
         return (
-            <Link to={`/single-beer/${this.state.data.id}`} className='card-component'>
-                <div >
-                    <div className="card-image">
-                        <img src={this.state.data.image} alt={this.state.data.name} />
-                    </div>
-                    <div className='price-cart'>
-                        <div>
-                            <p>
+            <CardLink to={`/single-beer/${this.state.data.id}`} className='card-component'>
+                <CardComponent>
+                    <DrinkImg src = {this.state.data.image} alt = {this.state.data.name}/>
+                    <CardPrice>
+                            <Price>
                                 {this.state.data.name} {this.state.data.liters} <br></br>
                                 R$ {this.state.data.price}
-                            </p>
-                        </div>
-                        <button><BiCart /></button>
-                    </div>
-
-                </div>
-            </Link>
+                            </Price>
+                        <CartButton><BiCart /></CartButton>
+                    </CardPrice>
+                </CardComponent>
+            </CardLink>
         );
     }
 }
