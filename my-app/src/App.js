@@ -5,7 +5,6 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Cart from './components/Cart/Cart';
 import SingleCard from './components/SingleCard';
-import Navbar from './components/Navbar/Navbar';
 import axios from 'axios';
 
 class App extends React.Component{
