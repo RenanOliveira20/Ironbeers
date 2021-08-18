@@ -26,7 +26,8 @@ export const CardComponent = styled.div `
     }
 `;
 export const  CardLink = styled(Link)`
-    width: 20%  
+    width: 20%
+
 `;
 export const CardPrice = styled.div `
     height: 100px;
@@ -42,6 +43,7 @@ export const CardPrice = styled.div `
 export const Price = styled.p `
 text-align: center;
 color: yellow;
+font-size: 20px;
 @media screen and (max-width: 375px){
        font-size:10px ;
        width: 60px
@@ -55,5 +57,6 @@ export const CartButton = styled.button`
         width: 25px;
         height: 25px;
         border-radius: 10px;
+
     }
 `

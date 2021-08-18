@@ -1,7 +1,14 @@
-import axios from "axios";
+  import axios from "axios";
 import React, { Component } from "react";
 import { BiCart } from "react-icons/bi";
-import "./style.css";
+import { Link } from "react-router-dom";
+import {
+  Footer,
+  LinkCart,
+  Single,
+  Rigth
+} from './styles'
+
 
 class SingleCard extends Component {
   state = {
@@ -20,33 +27,32 @@ class SingleCard extends Component {
   render() {
     return (
       <div>
-        <div className="single-card">
+        <Single>
           <div>
             <img src={this.state.data.image} alt={this.state.data.name} />
           </div>
-          <div className="right">
+          <Rigth>
             <h1>
               {this.state.data.name} {this.state.data.liters}{" "}
             </h1>
             <h2>R$ {this.state.data.price}</h2>
             <h3>Inventory: {this.state.data.quantity}</h3>
-          </div>
-        </div>
+          </Rigth>
+        </Single>
 
-        <div className="footer-single-card">
+        <Footer>
           <div>
             Subtotal <br></br>
             <span>R$ 0</span>
           </div>
           <div>
-            <span></span>Quantity <br></br>
-            <span> 0 </span>
+            Quantity<br></br>
+            <input type = 'number' value='0'/>
           </div>
-
-          <button>
+          <LinkCart to = '/cart'>
             Add to Cart <BiCart />
-          </button>
-        </div>
+          </LinkCart>
+        </Footer>
       </div>
     );
   }

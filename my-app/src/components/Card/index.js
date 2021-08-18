@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BiCart } from "react-icons/bi"
+import { Link } from 'react-router-dom';
 import {
     DrinkImg,
     CardComponent,
@@ -26,7 +27,7 @@ class Card extends Component {
                                 {this.state.data.name} {this.state.data.liters} <br></br>
                                 R$ {this.state.data.price}
                             </Price>
-                        <CartButton><BiCart /></CartButton>
+                        <Link to = '/cart'><CartButton><BiCart /></CartButton></Link>
                     </CardPrice>
                 </CardComponent>
             </CardLink>
