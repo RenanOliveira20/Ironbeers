@@ -5,7 +5,7 @@
       "image": "https://www.skol.com.br/sites/g/files/wnfebl1886/files/paragraphs/product_size/2021-04/Skol%20Pilsen_300.png",
       "price": 2.49,
       "liters": "300ml",
-      "quantity": 0,
+      "quantity": 300,
       "id": 0
     },
     {
@@ -13,7 +13,7 @@
       "image": "https://www.skol.com.br/sites/g/files/wnfebl1886/files/paragraphs/product_size/2021-04/Skol%20Pilsen_269_0.png",
       "price": 2.19,
       "liters": "269ml",
-      "quantity": 0,
+      "quantity": 300,
       "id": 1
     },
     {
@@ -21,18 +21,194 @@
       "image": "https://www.skol.com.br/sites/g/files/wnfebl1886/files/paragraphs/product_size/2021-07/300x750_skol_lata_269ml.png",
       "price": 2.29,
       "liters": "269ml",
-      "quantity": 0,
-      "id": 3
+      "quantity": 300,
+      "id": 2
     },
     {
       "name": "Skol",
       "image": "https://www.skol.com.br/sites/g/files/wnfebl1886/files/paragraphs/product_size/2021-04/Skol%20Pilsen_473.png",
       "price": 2.19,
       "liters": "473ml",
-      "quantity": 0,
-      "id": 2
+      "quantity": 300,
+      "id": 3
+    },
+    {
+      "name": "Skol Beats Senses Pack (6 Unidades)",
+      "image": "https://images.rappi.com.br/products/2098279615-1619815681634.png",
+      "price": 31.14,
+      "liters": "313ml",
+      "quantity": 150,
+      "id": 4
+    },
+    {
+      "name": "Brahma Duplo Malte",
+      "image": "https://www.castelaoemcasa.com.br/app/fotos/media_5f7c510588b34.PNG",
+      "price": 2.99,
+      "liters": "350ml",
+      "quantity": 300,
+      "id": 5
+    },
+    {
+      "name": "Brahma Chopp Pilsen Long Neck",
+      "image": "https://cdn.neemo.com.br/uploads/item/photo/476267/brahma-chopp-pilsen-300ml.png",
+      "price": 1.89,
+      "liters": "300ml",
+      "quantity": 330,
+      "id": 6
+    },
+    {
+      "name": "Budweiser",
+      "image": "https://media.cotabest.com.br/media/sku/cerveja-lata-350ml-budweiser-un.png",
+      "price": 3.47,
+      "liters": "350ml",
+      "quantity": 470,
+      "id": 7
+    },
+    {
+      "name": "Budweiser",
+      "image": "https://www.budweiser.com.br/sites/g/files/wnfebl2056/files/Budweiser/Cervejas/473ml-min.png",
+      "price": 2.89,
+      "liters": "269ml",
+      "quantity": 560,
+      "id": 8
+    },
+    {
+      "name": "Stella Artois",
+      "image": "https://savegnago.vteximg.com.br/arquivos/ids/304673-600-600/Cerveja-Stella-Artois-Lata-350ml.jpg?v=637074374840800000",
+      "price": 3.19,
+      "liters": "269ml",
+      "quantity": 340,
+      "id": 9
+    },
+    {
+      "name": "Stella Artois Long Neck",
+      "image": "http://stella.umstudio.com.br/img/section-products/skin/garrafa.png",
+      "price": 4.30,
+      "liters": "275ml",
+      "quantity": 250,
+      "id": 10
+    },
+    {
+      "name": "Budweiser Long Neck",
+      "image": "https://static.wixstatic.com/media/668df6_816862ac4ffa4191a74191cb670abaab~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+      "price": 4.83,
+      "liters": " 343ml",
+      "quantity": 387,
+      "id": 11
+    },
+    {
+      "name": "Original Caixa (12 Unidades)",
+      "image": "https://trimais.vteximg.com.br/arquivos/ids/1019506-1000-1000/foto_original.jpg?v=637479701299300000",
+      "price": 123.00,
+      "liters": "600ml",
+      "quantity": 142,
+      "id": 12
+    },
+    {
+      "name": "Original",
+      "image": "https://cdn-veloxcode.s3.sa-east-1.amazonaws.com/banco-de-imagens/uUwYvru56MscZaXE1WOVtVjuLqfKjgWkCW4A7VLX.png",
+      "price": 3.39,
+      "liters": "350ml",
+      "quantity": 200,
+      "id": 13
+    },
+    {
+      "name": "Bohemia",
+      "image": "https://cdn-veloxcode.s3.sa-east-1.amazonaws.com/banco-de-imagens/CYcJFLeCLjXTYWBMWx8PaQL613nSzI7Krno1XiJd.png",
+      "price": 4.35,
+      "liters": "350ml",
+      "quantity": 320,
+      "id": 14
+    },
+    {
+      "name": "Bohemia",
+      "image": "https://media.cotabest.com.br/media/sku/cerveja-lata-350ml-bohemia-lt.png",
+      "price": 3.99,
+      "liters": "269ml",
+      "quantity": 190,
+      "id": 15
+    },
+    {
+      "name": "Heineken",
+      "image": "https://www.glengarrywines.co.nz/images/v9/bottles/91708.png",
+      "price": 4.89,
+      "liters": "250ml",
+      "quantity": 270,
+      "id": 16
+    },
+    {
+      "name": "Heineken",
+      "image": "http://api.gestorx.com.br//UserFiles/1/88.png",
+      "price": 5.49,
+      "liters": "350ml",
+      "quantity": 360,
+      "id": 17
+    },
+    {
+      "name": "Heineken Long Neck",
+      "image": "https://cdn-veloxcode.s3.sa-east-1.amazonaws.com/banco-de-imagens/179J7yvZXHtX28zybgBladGh1hto3xrwRJZAIS9G.png",
+      "price": 6.95,
+      "liters": "330ml",
+      "quantity": 450,
+      "id": 18
+    },
+    {
+      "name": "Amstel Puro Malte",
+      "image": "https://s.cornershopapp.com/product-images/2180216.png?versionId=E3q4.d6kXBYo9VPL.hnhSiIzsKpK_Srp",
+      "price": 3.19,
+      "liters": "350ml",
+      "quantity": 395,
+      "id": 19
+    },
+    {
+      "name": "Amstel Puro Malte",
+      "image": "https://s.cornershopapp.com/product-images/2828320.png?versionId=coWVTcj7pmwYXi3AKvVOeG.RMDDMwiyO",
+      "price": 2.49,
+      "liters": "269ml",
+      "quantity": 440,
+      "id": 20
     }
+    
+  
   ],
+
+  "Distillates": [
+    {
+      "name": "",
+      "image": " ",
+      "price": 2.49,
+      "liters": "300ml",
+      "quantity": 300,
+      "id": 0
+    },
+    {
+      "name": "",
+      "image": " ",
+      "price": 2.49,
+      "liters": "300ml",
+      "quantity": 300,
+      "id": 0
+    },
+    {
+      "name": "",
+      "image": " ",
+      "price": 2.49,
+      "liters": "300ml",
+      "quantity": 300,
+      "id": 0
+    },
+    {
+      "name": "",
+      "image": " ",
+      "price": 2.49,
+      "liters": "300ml",
+      "quantity": 300,
+      "id": 0
+    }  
+  
+  ],
+
+  
   "users": [
     {
       "id": 0,
