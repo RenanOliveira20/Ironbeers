@@ -74,7 +74,7 @@
     },
     {
       "name": "Stella Artois",
-      "image": "https://savegnago.vteximg.com.br/arquivos/ids/304673-600-600/Cerveja-Stella-Artois-Lata-350ml.jpg?v=637074374840800000",
+      "image": "https://dalben.s3.sa-east-1.amazonaws.com/13660.png",
       "price": 3.19,
       "liters": "269ml",
       "quantity": 340,
@@ -425,58 +425,6 @@
   ],
 
   "liquors": [
-    {
-      "name": "Cachaça 51 ",
-      "image": "https://images.tcdn.com.br/img/img_prod/767693/cachaca_51_127_1_20200326025932.png",
-      "price": 9.90,
-      "liters": "965ml",
-      "quantity": 50,
-      "id": 51
-    },
-    {
-      "name": "Velho Barreiro",
-      "image": "https://www.eorla.com.br/product_images/x/463/agvelhobarreiro__12662_zoom.png",
-      "price": 9.79,
-      "liters": "910ml",
-      "quantity": 50,
-      "id": 52
-    },
-    {
-      "name": "Cachaça São Francisco",
-      "image": "https://cdn-veloxcode.s3.sa-east-1.amazonaws.com/banco-de-imagens/aPaHigFFpFnaZG6y4p8WISzk6rpDAMLWFC6OFyq5.png",
-      "price": 23.90,
-      "liters": "970ml",
-      "quantity": 50,
-      "id": 53
-    },
-    {
-      "name": "Cachaça Cabaré Prata",
-      "image": "https://cdn.iset.io/assets/42520/produtos/4280/18cc5b7cd6d9932d5cf87b88de2ab49e.png",
-      "price": 29.90,
-      "liters": "700ml",
-      "quantity": 50,
-      "id": 54
-    },
-    {
-      "name": "Cachaça Florete Limão",
-      "image": "https://media.cotabest.com.br/media/sku/cachaca-limao-garrafa-500ml-florete-un.png",
-      "price": 4.90,
-      "liters": "500ml",
-      "quantity": 100,
-      "id": 55
-    },
-    {
-      "name": "Cachaça Pitu",
-      "image": "https://media.cotabest.com.br/media/sku/cachaca-garrafa-965ml-pitu-un.png",
-      "price": 13.69,
-      "liters": "965ml",
-      "quantity": 50,
-      "id": 56
-    }
-   
-  ],
-
-  "wines": [
     {
       "name": "Cachaça 51 ",
       "image": "https://images.tcdn.com.br/img/img_prod/767693/cachaca_51_127_1_20200326025932.png",
