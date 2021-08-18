@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../Card";
+import Footer from "../Footer/index";
 import "./style.css";
 class Home extends Component {
   render() {
@@ -10,6 +11,7 @@ class Home extends Component {
             return <Card key={e.id} data={e} />;
           })}
         </div>
+        <Footer/>
       </div>
     );
   }
