@@ -11,7 +11,7 @@ class Home extends Component {
             return <Card key={e.id} data={e} />;
           })}
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
