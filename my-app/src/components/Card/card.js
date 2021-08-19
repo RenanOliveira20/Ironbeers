@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export const DrinkImg = styled.img`
     margin-top:10px;
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 20%;
     @media screen and (max-width: 375px){
         height: 50px;
         width: auto;
@@ -12,7 +12,7 @@ export const DrinkImg = styled.img`
 `;
 export const CardComponent = styled.div `
     background-color: black;
-    width: 100%;
+    width: 20%;
     height: 220px;
     display: flex;
     flex-direction: column;
@@ -26,11 +26,17 @@ export const CardComponent = styled.div `
     }
 `;
 export const  CardLink = styled(Link)`
-    width: 20%
+    height: 85%;
+    width: 100%;
+    text-decoration:none;
+    display: flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items: center
+    `;
 
-`;
 export const CardPrice = styled.div `
-    height: 100px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
