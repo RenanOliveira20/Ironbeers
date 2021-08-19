@@ -7,8 +7,8 @@ class Home extends Component {
     return (
       <div>
         <div className="carrousel">
-          {this.props.data.map((e) => {
-            return <Card key={e.id} data={e} />;
+          {this.props.data.map((e,i) => {
+            if(i < 4)return <Card key={e.id} data={e} />;
           })}
         </div>
         <Footer />
