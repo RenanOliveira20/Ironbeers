@@ -1,17 +1,18 @@
 import React from "react";
+import api from "../../api/api";
 import ListItem from "../ListCart/ListItem";
-import axios from "axios";
-
 class Cart extends React.Component {
-  state = {
-    cart: []
-  }
-  componentDidMount = async () =>{
-    const myCart = await axios.get('http://localhost:8000/users')
-    this.setState({
-      cart: myCart.data[0].cart
+state ={
+  cart: []
+}
+
+  componentDidMount = async() => {
+    const getCart = await api.getCart(0);
+    this.setState ({
+      cart : getCart
     })
   }
+
   render() {
     return (
       <div>

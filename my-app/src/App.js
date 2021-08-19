@@ -54,16 +54,16 @@ class App extends React.Component {
       });
     }
   };
-
+  
   render() {
     return (
       <div>
        <Nav action= {this.handleOnSearch}/>
         <Switch>
-          <Route exact path="/" render={(props)=> <Home {...props} data={this.state.filtered}/>}/>
+          <Route exact path="/" render={(props)=> <Home {...props} action = {apiBeers.getCart}  data={this.state.filtered}/>}/>
           <Route
             path="/cart"
-            render={(props) => <Cart {...props} data={this.state.cart} />}
+            render={(props) => <Cart {...props} data={this.state.cart}  />}
           />
           <Route path="/single-beer/:id" component={SingleCard} />
         </Switch>
