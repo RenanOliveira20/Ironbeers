@@ -9,6 +9,7 @@ import {
     Price,
     CartButton
 } from './card'
+import api from '../../api/api';
 
 class Card extends Component {
     constructor(props) {
@@ -16,6 +17,11 @@ class Card extends Component {
         this.state = {
             data: props.data
         }
+        console.log(props.action)
+    }
+    handleToCart = () =>{
+        let  { id }=this.state.data
+        api.addBeerCart( id, 0)
     }
     render() {
         return (
@@ -27,7 +33,7 @@ class Card extends Component {
                                 {this.state.data.name} {this.state.data.liters} <br></br>
                                 R$ {this.state.data.price}
                             </Price>
-                        <Link to = '/cart'><CartButton><BiCart /></CartButton></Link>
+                        <Link to ='/cart' ><CartButton onClick={this.handleToCart}><BiCart /></CartButton></Link>
                     </CardPrice>
                 </CardComponent>
             </CardLink>
