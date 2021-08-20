@@ -20,7 +20,20 @@ class List extends Component {
         console.error(e)
     }
   };
+  handleImput = (e) => {
+    this.setState({
+      input : e.target.value
+    })
+  }
+  deleteItem = async () => {
+    try {
+      await apiBeers.deleteBeerCart(this.props.index,0);
+      this.props.action()
+    } catch (error) {
+      
+    }
 
+  }
   render() {
     return (
       <>
@@ -31,9 +44,9 @@ class List extends Component {
             <Span>{this.state.beer.name}</Span>   
             <Span>R$ {this.state.beer.price}</Span>
             <Span>{this.state.beer.quantity}</Span>
-            <Input type="number" min="0" value= {this.state.input}/>          
+            <Input type="number" min="0" value= {this.state.input} onChange = { this.handleImput}/>          
         </Div>
-            <Trash />
+            <Trash onClick ={this.deleteItem} />
           </Li>
         )}
       </>
