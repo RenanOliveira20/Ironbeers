@@ -1,5 +1,7 @@
-.carrousel{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+.rec.rec-arrow {
+    background-color: black;
+    color: gold;
+}
+.rec.rec-arrow :focus{
+    outline: none;
 }

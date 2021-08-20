@@ -11,20 +11,22 @@ export const DrinkImg = styled.img`
     }
 `;
 export const CardComponent = styled.div `
+margin-top: 20px;
     background-color: black;
-    width: 20%;
+    width: 200px;
     height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
     border-radius: 15px;
    div {
         height: 50%
     }
     @media screen and (max-width: 375px){
         height: 130px;
-        width: 20%;
+        width: 100px;
     }
 `;
 export const  CardLink = styled(Link)`
@@ -59,16 +61,18 @@ height: 50%;
     }
 `;
 export const CartButton = styled.button`
-    width: 100%;
+    width: 95%;
     background-color: gold;
     color: black;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     @media screen and (max-width: 375px){
-        width: 100%;;
-        height: 25px;
+        width: 100%;
+        height : 20px;
         border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-
+        border-bottom-right-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center
     }
 `

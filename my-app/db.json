@@ -475,19 +475,7 @@
       "cart": [
         {
           "beerId": 2,
-          "quantity": 4
-        },
-        {
-          "beerId": 1,
-          "quantity": 4
-        },
-        {
-          "beerId": 3,
-          "quantity": 1
-        },
-        {
-          "beerId": 0,
-          "quantity": 1
+          "quantity": 10
         }
       ]
     }

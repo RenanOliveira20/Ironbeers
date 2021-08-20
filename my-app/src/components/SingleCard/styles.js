@@ -24,9 +24,9 @@ export const Single = styled.div`
         justify-content:space-between;
         height: 400px;
         div{
-            width: 100%;
+            width: 90%;
             height: 50%;
-            margin-top: 20px;
+            margin-left: 5%;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
             border-top-left-radius: 0px;
@@ -37,8 +37,10 @@ export const Single = styled.div`
         }
 
     }
+}
 `;
 export const Rigth = styled.div`
+width: 90%;
     background-color: white;
     text-align: center;
     margin-right: 2%;
@@ -55,6 +57,17 @@ export const Rigth = styled.div`
     };
     h3 {
         font-size: 30px
+    }
+    @media screen and (max-width: 375px){
+        h1 {
+        font-size: 40px
+    };
+    h2 {
+        font-size: 30px
+    };
+    h3 {
+        font-size: 20px
+    }
     }
 `;
 export const Footer = styled.div`
