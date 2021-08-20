@@ -11,7 +11,8 @@ export const DrinkImg = styled.img`
     }
 `;
 export const CardComponent = styled.div `
-margin-top: 20px;
+    margin-top: 20px;
+    margin-left: 30%;
     background-color: black;
     width: 200px;
     height: 220px;
