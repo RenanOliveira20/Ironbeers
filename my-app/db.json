@@ -473,6 +473,26 @@
       "username": "user 1",
       "password": "1234",
       "cart": [
+        {
+          "beerId": 2,
+          "quantity": 1
+        },
+        {
+          "beerId": 2,
+          "quantity": 1
+        },
+        {
+          "beerId": 2,
+          "quantity": 1
+        },
+        {
+          "beerId": 1,
+          "quantity": 1
+        },
+        {
+          "beerId": 0,
+          "quantity": 1
+        }
       ]
     }
   ]
