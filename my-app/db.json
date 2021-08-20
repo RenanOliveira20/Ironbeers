@@ -474,8 +474,20 @@
       "password": "1234",
       "cart": [
         {
-          "beerId": 0,
+          "beerId": 2,
           "quantity": 4
+        },
+        {
+          "beerId": 1,
+          "quantity": 4
+        },
+        {
+          "beerId": 3,
+          "quantity": 1
+        },
+        {
+          "beerId": 0,
+          "quantity": 1
         }
       ]
     }

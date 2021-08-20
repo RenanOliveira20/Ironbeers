@@ -18,8 +18,27 @@ export const Single = styled.div`
             height:500px ;
         }
     }
+    @media screen and (max-width: 375px){
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        height: 400px;
+        div{
+            width: 100%;
+            height: 50%;
+            margin-top: 20px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            img {
+            height:200px ;
+            margin-top: -20px;
+        }
+
+    }
 `;
-export const Rigth = styled.div `
+export const Rigth = styled.div`
     background-color: white;
     text-align: center;
     margin-right: 2%;
@@ -38,7 +57,7 @@ export const Rigth = styled.div `
         font-size: 30px
     }
 `;
-export const Footer = styled.div `
+export const Footer = styled.div`
 display: flex;
 justify-content: space-evenly;
 div {
@@ -69,7 +88,7 @@ input{
 }
 
 `;
-export const LinkCart = styled(Link) `
+export const LinkCart = styled(Link)`
     font-size: 25px;
     width: 30%;
     padding: 10px;

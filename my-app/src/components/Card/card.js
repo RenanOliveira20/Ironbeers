@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export const DrinkImg = styled.img`
     margin-top:10px;
-    height: auto;
-    width: 20%;
+    height: 100%;
+    width: auto;
     @media screen and (max-width: 375px){
         height: 50px;
         width: auto;
@@ -19,10 +19,12 @@ export const CardComponent = styled.div `
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+   div {
+        height: 50%
+    }
     @media screen and (max-width: 375px){
-        height: 100px;
-        width: 120%;  
-        margin-left:-10%
+        height: 130px;
+        width: 20%;
     }
 `;
 export const  CardLink = styled(Link)`
@@ -49,20 +51,24 @@ export const CardPrice = styled.div `
 export const Price = styled.p `
 text-align: center;
 color: yellow;
-font-size: 20px;
+font-size: 16px;
+height: 50%;
 @media screen and (max-width: 375px){
        font-size:10px ;
        width: 60px
     }
 `;
 export const CartButton = styled.button`
-    width: 80px;
+    width: 100%;
     background-color: gold;
-    border-radius: 15px;
+    color: black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     @media screen and (max-width: 375px){
-        width: 25px;
+        width: 100%;;
         height: 25px;
-        border-radius: 10px;
+        border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 
     }
 `

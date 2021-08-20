@@ -25,7 +25,9 @@ class Card extends Component {
         return (
             <CardComponent>
                 <CardLink to={`/single-beer/${this.state.data.id}`} >
+                    <div>
                     <DrinkImg src={this.state.data.image} alt={this.state.data.name} />
+                    </div>
                     <CardPrice>
                         <Price>
                             {this.state.data.name} {this.state.data.liters} <br></br>
@@ -33,7 +35,7 @@ class Card extends Component {
                         </Price>
                     </CardPrice>
                 </CardLink>
-                <CartButton onClick={this.handleToCart}><BiCart /></CartButton>
+                <CartButton onClick={this.handleToCart}><BiCart />+</CartButton>
             </CardComponent>
 
         );
