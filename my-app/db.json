@@ -473,9 +473,7 @@
       "username": "user 1",
       "password": "1234",
       "cart": [
-        {
-          "beerId": 2,
-          "quantity": 10
+        
         }
       ]
     }

@@ -17,8 +17,9 @@ class Home extends Component {
           {this.props.data.map((e,i) => {
            return  <Card key={e.id} data={e} number={i} />;
           })}
+
           </Carousel>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
