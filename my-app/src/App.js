@@ -11,7 +11,6 @@ import  Nav from './components/Navbar/Navbar';
 class App extends React.Component {
   state = {
     dados: [],
-    cart: [],
     erro: false,
     filtered: [],
   };
@@ -19,10 +18,8 @@ class App extends React.Component {
   async componentDidMount() {
     try {
       const beers = await apiBeers.getBeers();
-      const cart = await apiBeers.getCart(0);
       this.setState({
         dados: beers,
-        cart: cart,
         filtered: beers,
       });
     } catch (e) {
@@ -42,25 +39,13 @@ class App extends React.Component {
     });
   };
 
-  addBeerCart = async (idBeer) => {
-    try {
-      const addBeer = await apiBeers.addBeerCart(idBeer, 0);
-      this.setState({
-        cart: addBeer,
-      });
-    } catch (e) {
-      this.setState({
-        erro: true,
-      });
-    }
-  };
   
   render() {
     return (
       <div>
        <Nav action= {this.handleOnSearch}/>
         <Switch>
-          <Route exact path="/" render={(props)=> <Home {...props} action = {apiBeers.getCart}  data={this.state.filtered}/>}/>
+          <Route exact path="/" render={(props)=> <Home {...props}  data={this.state.filtered}/>}/>
           <Route
             path="/cart"
             render={(props) => <Cart {...props} data={this.state.cart}  />}

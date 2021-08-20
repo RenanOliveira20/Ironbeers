@@ -36,13 +36,29 @@ class jsonApi {
   addBeerCart = async (idBeer, idUser) => {
     try {
       const cart = await this.getCart(idUser);
-      cart.push({ beerId: idBeer, quantity: 1 });
+      let index = cart.findIndex((e) =>{
+        return e.beerId === idBeer
+      })
+      index != -1 ?
+      cart[index].quantity += 1 :
+      cart.push({ beerId: idBeer, quantity: 1 })
+      
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       return result.data.cart;
     } catch (e) {
       throw Error(e);
     }
   };
+  deleteBeerCart = async (indexBeer,idUser) => {
+    try{
+      const cart = await this.getCart(idUser);
+      cart.splice(indexBeer, 1)
+      const result = await this.api.patch(`/users/${idUser}`, { cart });
+      return result.data.cart
+    }catch (e){
+      throw Error(e)
+    }
+  }
 }
 
 export default new jsonApi();

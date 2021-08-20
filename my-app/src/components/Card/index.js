@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BiCart } from "react-icons/bi"
-import { Link } from 'react-router-dom';
 import {
     DrinkImg,
     CardComponent,
@@ -15,17 +14,12 @@ class Card extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: props.data,
-            cart: []
+            data: props.data
         }
-        console.log(props.action)
     }
     handleToCart = () => {
         let { id } = this.state.data
-        api.addBeerCart(id, 0)
-        //    this.setState({
-        //         api.getCart(0)
-        //     })
+        api.addBeerCart(id , 0)
     }
     render() {
         return (
