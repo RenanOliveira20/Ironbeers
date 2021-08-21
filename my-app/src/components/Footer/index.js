@@ -6,7 +6,7 @@ import github from "../../images/github-logo.jpeg";
 function Footer() {
   return (
     <footer
-      className="navbar navbar-static-bottom navbar-light position-fixed fixed-bottom w-100"
+      className="navbar navbar-static-bottom navbar-light  w-100"
       style={{ backgroundColor: "black" }}
     >
       <div className="d-flex flex-column align-content-start p-1">

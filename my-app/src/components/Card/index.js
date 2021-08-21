@@ -16,6 +16,7 @@ class Card extends Component {
         this.state = {
             data: props.data
         }
+        console.log(props.data)
     }
     handleToCart = () => {
         let { id } = this.state.data

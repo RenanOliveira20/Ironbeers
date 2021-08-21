@@ -12,10 +12,9 @@ export const DrinkImg = styled.img`
 `;
 export const CardComponent = styled.div `
     margin-top: 20px;
-    margin-left: 30%;
     background-color: black;
-    width: 200px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +31,7 @@ export const CardComponent = styled.div `
 `;
 export const  CardLink = styled(Link)`
     height: 85%;
-    width: 100%;
+    width: 90%;
     text-decoration:none;
     display: flex;
     flex-direction : column;

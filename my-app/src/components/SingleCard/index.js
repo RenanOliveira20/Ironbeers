@@ -14,7 +14,7 @@ class SingleCard extends Component {
     data: [],
   };
   componentDidMount = () => {
-    axios.get("http://localhost:8000/beers").then((response) => {
+    axios.get("http://localhost:8000/products").then((response) => {
       const myDrink = response.data.filter((e) => {
         return e.id === Number(this.props.match.params.id);
       });
