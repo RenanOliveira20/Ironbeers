@@ -40,7 +40,7 @@ class Navbar extends React.Component {
         <Bars/> 
         </Link>       
         <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <NavBtnLink to="/singIn">Sign In</NavBtnLink>
         </NavBtn>
       </Nav>
     </>
