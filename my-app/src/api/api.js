@@ -6,9 +6,9 @@ class jsonApi {
       baseURL: "http://localhost:8000",
     });
   }
-  getBeers = async () => {
+  getBeers = async (drinkName) => {
     try {
-      const result = await this.api.get("/beers");
+      const result = await this.api.get(`/${drinkName}`);
       return result.data;
     } catch (e) {
       throw Error(e);
