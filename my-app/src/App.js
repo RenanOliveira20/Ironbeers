@@ -45,12 +45,12 @@ class App extends React.Component {
       <div>
        <Nav action= {this.handleOnSearch}/>
         <Switch>
-          <Route exact path="/" render={(props)=> <Home {...props}  data={this.state.filtered}/>}/>
+          <Route exact path="/"component = {Home}/>
           <Route
             path="/cart"
             render={(props) => <Cart {...props} data={this.state.cart}  />}
           />
-          <Route path="/single-beer/:id" component={SingleCard} />
+          <Route path="/single-beer" component={SingleCard} />
         </Switch>
       </div>
     );
