@@ -1,4 +1,5 @@
 .boxes {
     display:flex;
+    justify-content: space-around;
     height: 500px;
 }

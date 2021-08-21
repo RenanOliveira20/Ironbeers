@@ -50,7 +50,7 @@ class App extends React.Component {
             path="/cart"
             render={(props) => <Cart {...props} data={this.state.cart}  />}
           />
-          <Route path="/single-beer" component={SingleCard} />
+          <Route path="/single-beer/:id" component={SingleCard} />
         </Switch>
       </div>
     );
