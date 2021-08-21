@@ -27,7 +27,7 @@ class List extends Component {
   }
   deleteItem = async () => {
     try {
-      await apiBeers.deleteBeerCart(this.props.index,0);
+      await apiBeers.deleteBeerCart(this.props.data.beerId, 0);
       this.props.action()
     } catch (error) {
       

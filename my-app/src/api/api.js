@@ -39,7 +39,7 @@ class jsonApi {
       let index = cart.findIndex((e) =>{
         return e.beerId === idBeer
       })
-      index != -1 ?
+      index !==-1 ?
       cart[index].quantity += 1 :
       cart.push({ beerId: idBeer, quantity: 1 })
       
@@ -49,10 +49,16 @@ class jsonApi {
       throw Error(e);
     }
   };
-  deleteBeerCart = async (indexBeer,idUser) => {
+  deleteBeerCart = async (idBeer,idUser) => {
     try{
       const cart = await this.getCart(idUser);
-      cart.splice(indexBeer, 1)
+      const index = cart.filter((e, index) => {
+        let indexbeer = '' 
+      if (e.beerId === idBeer) indexbeer = index
+      return indexbeer
+            })
+      console.log (index, cart)
+      cart.splice(index, 1)
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       return result.data.cart
     }catch (e){
