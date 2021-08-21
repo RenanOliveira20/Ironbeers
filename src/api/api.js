@@ -3,7 +3,7 @@ import axios from "axios";
 class jsonApi {
   constructor() {
     this.api = axios.create({
-      baseURL: "http://localhost:8000",
+      baseURL: "https://api-drinks20.herokuapp.com",
     });
   }
   getBeers = async () => {
