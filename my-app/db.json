@@ -519,6 +519,9 @@
       "id": 0,
       "username": "user 1",
       "password": "1234",
+      "email": "jho@gomail.com",
+      "street": "Rua one",
+      "number": 0,
       "cart": []
     }
   ]

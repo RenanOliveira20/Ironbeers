@@ -41,7 +41,7 @@ const Controlled = () => {
   });
 
   return (
-    <div className="row">
+    <div className="row formrow" >
       <div className="col-lg-6">
         <div className="form-group">
           <label>Nome</label>

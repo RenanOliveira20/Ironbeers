@@ -3,16 +3,16 @@
     color: red;
     font-size: 14px;
   }
-  .container-fluid {
-      
+  .formrow {
+      width: 100%;
+      display: flex;
+      justify-content: center;
   }
   .section {
     margin: 50px;
     min-height: 100vh;
     font-size: calc(20px + 2vmin);
     color: black;
-    display: flex;
-    justify-content: center;
   }
   
   ::-webkit-scrollbar {
