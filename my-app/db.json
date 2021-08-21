@@ -1,12 +1,13 @@
 {
-  "beers": [
+  "produts": [
     {
       "name": "Skol",
       "image": "https://www.skol.com.br/sites/g/files/wnfebl1886/files/paragraphs/product_size/2021-04/Skol%20Pilsen_300.png",
       "price": 2.49,
       "liters": "300ml",
       "quantity": 300,
-      "id": 0
+      "id": 0,
+      "type": "beer"
     },
     {
       "name": "Skol",
@@ -14,7 +15,8 @@
       "price": 2.19,
       "liters": "269ml",
       "quantity": 300,
-      "id": 1
+      "id": 1,
+      "type": "beer"
     },
     {
       "name": "Skol Puro Malte",
@@ -22,7 +24,8 @@
       "price": 2.29,
       "liters": "269ml",
       "quantity": 300,
-      "id": 2
+      "id": 2,
+      "type": "beer"
     },
     {
       "name": "Skol",
@@ -30,7 +33,8 @@
       "price": 2.19,
       "liters": "473ml",
       "quantity": 300,
-      "id": 3
+      "id": 3,
+      "type": "beer"
     },
     {
       "name": "Brahma Duplo Malte",
@@ -38,7 +42,8 @@
       "price": 2.99,
       "liters": "350ml",
       "quantity": 300,
-      "id": 5
+      "id": 5,
+      "type": "beer"
     },
     {
       "name": "Brahma Chopp Pilsen Long Neck",
@@ -46,7 +51,8 @@
       "price": 1.89,
       "liters": "300ml",
       "quantity": 330,
-      "id": 6
+      "id": 6,
+      "type": "beer"
     },
     {
       "name": "Budweiser",
@@ -54,7 +60,8 @@
       "price": 3.47,
       "liters": "350ml",
       "quantity": 470,
-      "id": 7
+      "id": 7,
+      "type": "beer"
     },
     {
       "name": "Budweiser",
@@ -62,7 +69,8 @@
       "price": 2.89,
       "liters": "269ml",
       "quantity": 560,
-      "id": 8
+      "id": 8,
+      "type": "beer"
     },
     {
       "name": "Stella Artois",
@@ -70,7 +78,8 @@
       "price": 3.19,
       "liters": "269ml",
       "quantity": 340,
-      "id": 9
+      "id": 9,
+      "type": "beer"
     },
     {
       "name": "Stella Artois Long Neck",
@@ -78,7 +87,8 @@
       "price": 4.3,
       "liters": "275ml",
       "quantity": 250,
-      "id": 10
+      "id": 10,
+      "type": "beer"
     },
     {
       "name": "Budweiser Long Neck",
@@ -86,7 +96,8 @@
       "price": 4.83,
       "liters": " 343ml",
       "quantity": 387,
-      "id": 11
+      "id": 11,
+      "type": "beer"
     },
     {
       "name": "Original",
@@ -94,7 +105,8 @@
       "price": 3.39,
       "liters": "350ml",
       "quantity": 200,
-      "id": 13
+      "id": 13,
+      "type": "beer"
     },
     {
       "name": "Bohemia",
@@ -102,7 +114,8 @@
       "price": 4.35,
       "liters": "350ml",
       "quantity": 320,
-      "id": 14
+      "id": 14,
+      "type": "beer"
     },
     {
       "name": "Bohemia",
@@ -110,7 +123,8 @@
       "price": 3.99,
       "liters": "269ml",
       "quantity": 190,
-      "id": 15
+      "id": 15,
+      "type": "beer"
     },
     {
       "name": "Heineken",
@@ -118,7 +132,8 @@
       "price": 4.89,
       "liters": "250ml",
       "quantity": 270,
-      "id": 16
+      "id": 16,
+      "type": "beer"
     },
     {
       "name": "Heineken",
@@ -126,7 +141,8 @@
       "price": 5.49,
       "liters": "350ml",
       "quantity": 360,
-      "id": 17
+      "id": 17,
+      "type": "beer"
     },
     {
       "name": "Heineken Long Neck",
@@ -134,7 +150,8 @@
       "price": 6.95,
       "liters": "330ml",
       "quantity": 450,
-      "id": 18
+      "id": 18,
+      "type": "beer"
     },
     {
       "name": "Amstel Puro Malte",
@@ -142,7 +159,8 @@
       "price": 3.19,
       "liters": "350ml",
       "quantity": 395,
-      "id": 19
+      "id": 19,
+      "type": "beer"
     },
     {
       "name": "Amstel Puro Malte",
@@ -150,17 +168,17 @@
       "price": 2.49,
       "liters": "269ml",
       "quantity": 440,
-      "id": 20
-    }
-  ],
-  "vodkas": [
+      "id": 20,
+      "type": "beer"
+    },
     {
       "name": "Vodka Smirnoff",
       "image": "https://images.tcdn.com.br/img/img_prod/584699/smirnoff_red_label_vodka_375_ml_384_1_20171115160903.png",
       "price": 38.9,
       "liters": "998ml",
       "quantity": 150,
-      "id": 21
+      "id": 21,
+      "type": "vodka"
     },
     {
       "name": "Vodka Balalaika",
@@ -168,7 +186,8 @@
       "price": 14.49,
       "liters": "1l",
       "quantity": 150,
-      "id": 22
+      "id": 22,
+      "type": "vodka"
     },
     {
       "name": "Vodka Askov",
@@ -176,7 +195,8 @@
       "price": 14.69,
       "liters": "900ml",
       "quantity": 150,
-      "id": 23
+      "id": 23,
+      "type": "vodka"
     },
     {
       "name": "Vodka Askov Sabores Frutas Vermelhas",
@@ -184,7 +204,8 @@
       "price": 15.29,
       "liters": "900ml",
       "quantity": 150,
-      "id": 24
+      "id": 24,
+      "type": "vodka"
     },
     {
       "name": "Vodka Absolut Elyx",
@@ -192,7 +213,8 @@
       "price": 170.49,
       "liters": "750ml",
       "quantity": 100,
-      "id": 25
+      "id": 25,
+      "type": "vodka"
     },
     {
       "name": "Vodka Ciroc Peach",
@@ -200,7 +222,8 @@
       "price": 175.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 26
+      "id": 26,
+      "type": "vodka"
     },
     {
       "name": "Vodka Ciroc Red Berry",
@@ -208,7 +231,8 @@
       "price": 175.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 27
+      "id": 27,
+      "type": "vodka"
     },
     {
       "name": "Vodka Absolut Original",
@@ -216,7 +240,8 @@
       "price": 99.99,
       "liters": "1l",
       "quantity": 100,
-      "id": 28
+      "id": 28,
+      "type": "vodka"
     },
     {
       "name": "Vodka Skyy",
@@ -224,7 +249,8 @@
       "price": 39.9,
       "liters": "980ml",
       "quantity": 100,
-      "id": 29
+      "id": 29,
+      "type": "vodka"
     },
     {
       "name": "Vodka Ciroc",
@@ -232,17 +258,17 @@
       "price": 175.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 30
-    }
-  ],
-  "whiskys": [
+      "id": 30,
+      "type": "vodka"
+    },
     {
       "name": "Whisky White Horse 1L",
       "image": "https://bebobreja.com/wp-content/uploads/2021/04/Whisky-White-Horse-bebobreja--e1617346521842-320x327.png",
       "price": 78.9,
       "liters": "1l",
       "quantity": 250,
-      "id": 31
+      "id": 31,
+      "type": "whisky"
     },
     {
       "name": "Whisky Johnnie Walker Red Labe",
@@ -250,7 +276,8 @@
       "price": 99.99,
       "liters": "1l",
       "quantity": 250,
-      "id": 32
+      "id": 32,
+      "type": "whisky"
     },
     {
       "name": "Whisky Jack Daniels",
@@ -258,7 +285,8 @@
       "price": 155.9,
       "liters": "1l",
       "quantity": 250,
-      "id": 33
+      "id": 33,
+      "type": "whisky"
     },
     {
       "name": "Whisky Jack Daniels Honey",
@@ -266,7 +294,8 @@
       "price": 149.9,
       "liters": "1l",
       "quantity": 250,
-      "id": 34
+      "id": 34,
+      "type": "whisky"
     },
     {
       "name": "Whisky Jack Daniel's Fire",
@@ -274,7 +303,8 @@
       "price": 147.9,
       "liters": "1l",
       "quantity": 250,
-      "id": 35
+      "id": 35,
+      "type": "whisky"
     },
     {
       "name": "Whisky Passport Scotch",
@@ -282,7 +312,8 @@
       "price": 46.9,
       "liters": "1l",
       "quantity": 350,
-      "id": 36
+      "id": 36,
+      "type": "whisky"
     },
     {
       "name": "Whisky Chivas Regal 12 Anos",
@@ -290,7 +321,8 @@
       "price": 169.9,
       "liters": "1ml",
       "quantity": 150,
-      "id": 37
+      "id": 37,
+      "type": "whisky"
     },
     {
       "name": "Whisky Johnnie Walker Black Label",
@@ -298,7 +330,8 @@
       "price": 175.9,
       "liters": "1l",
       "quantity": 150,
-      "id": 38
+      "id": 38,
+      "type": "whisky"
     },
     {
       "name": "Whisky Old Parr Grand 12 Anos",
@@ -306,7 +339,8 @@
       "price": 149.9,
       "liters": "1l",
       "quantity": 150,
-      "id": 39
+      "id": 39,
+      "type": "whisky"
     },
     {
       "name": "Whisky Ballantines 12 anos",
@@ -314,17 +348,17 @@
       "price": 149.9,
       "liters": "1l",
       "quantity": 150,
-      "id": 40
-    }
-  ],
-  "gins": [
+      "id": 40,
+      "type": "whisky"
+    },
     {
       "name": "Gin Arapuru London Dry",
       "image": "https://www.emporiofreicaneca.com.br/wp-content/uploads/2019/12/arapuru-ki.png",
       "price": 99.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 41
+      "id": 41,
+      "type": "gin"
     },
     {
       "name": "Gin Seagers",
@@ -332,7 +366,8 @@
       "price": 42.9,
       "liters": "980ml",
       "quantity": 100,
-      "id": 42
+      "id": 42,
+      "type": "gin"
     },
     {
       "name": "Gin Atlantis London Dry",
@@ -340,7 +375,8 @@
       "price": 75.9,
       "liters": "900ml",
       "quantity": 100,
-      "id": 43
+      "id": 43,
+      "type": "gin"
     },
     {
       "name": "Gin Vitória Régia",
@@ -348,7 +384,8 @@
       "price": 89,
       "liters": "750ml",
       "quantity": 100,
-      "id": 44
+      "id": 44,
+      "type": "gin"
     },
     {
       "name": "Gin Tanqueray",
@@ -356,7 +393,8 @@
       "price": 121.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 45
+      "id": 45,
+      "type": "gin"
     },
     {
       "name": "Gin Bombay Sapphire Com 1 Taça Exclusiva",
@@ -364,7 +402,8 @@
       "price": 149.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 46
+      "id": 46,
+      "type": "gin"
     },
     {
       "name": "Gin Beefeater London Dry",
@@ -372,7 +411,8 @@
       "price": 136.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 47
+      "id": 47,
+      "type": "gin"
     },
     {
       "name": "Gin Larios 12",
@@ -380,7 +420,8 @@
       "price": 112.9,
       "liters": "700ml",
       "quantity": 100,
-      "id": 48
+      "id": 48,
+      "type": "gin"
     },
     {
       "name": "Gin Beefeater Pink",
@@ -388,7 +429,8 @@
       "price": 149.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 49
+      "id": 49,
+      "type": "gin"
     },
     {
       "name": "Gin Gordons London Dry",
@@ -396,17 +438,17 @@
       "price": 79.9,
       "liters": "750ml",
       "quantity": 100,
-      "id": 50
-    }
-  ],
-  "liquors": [
+      "id": 50,
+      "type": "gin"
+    },
     {
       "name": "Cachaça 51 ",
       "image": "https://images.tcdn.com.br/img/img_prod/767693/cachaca_51_127_1_20200326025932.png",
       "price": 9.9,
       "liters": "965ml",
       "quantity": 50,
-      "id": 51
+      "id": 51,
+      "type": "liquor"
     },
     {
       "name": "Velho Barreiro",
@@ -414,7 +456,8 @@
       "price": 9.79,
       "liters": "910ml",
       "quantity": 50,
-      "id": 52
+      "id": 52,
+      "type": "liquor"
     },
     {
       "name": "Cachaça São Francisco",
@@ -422,7 +465,8 @@
       "price": 23.9,
       "liters": "970ml",
       "quantity": 50,
-      "id": 53
+      "id": 53,
+      "type": "liquor"
     },
     {
       "name": "Cachaça Cabaré Prata",
@@ -430,7 +474,8 @@
       "price": 29.9,
       "liters": "700ml",
       "quantity": 50,
-      "id": 54
+      "id": 54,
+      "type": "liquor"
     },
     {
       "name": "Cachaça Florete Limão",
@@ -438,7 +483,8 @@
       "price": 4.9,
       "liters": "500ml",
       "quantity": 100,
-      "id": 55
+      "id": 55,
+      "type": "liquor"
     },
     {
       "name": "Cachaça Pitu",
@@ -446,17 +492,17 @@
       "price": 13.69,
       "liters": "965ml",
       "quantity": 50,
-      "id": 56
-    }
-  ],
-  "boxes": [
+      "id": 56,
+      "type": "liquor"
+    },
     {
       "name": "Original Caixa (12 Unidades)",
       "image": "https://trimais.vteximg.com.br/arquivos/ids/1019506-1000-1000/foto_original.jpg?v=637479701299300000",
       "price": 123,
       "liters": "600ml",
       "quantity": 142,
-      "id": 12
+      "id": 12,
+      "type": "boxe"
     },
     {
       "name": "Skol Beats Senses Pack (6 Unidades)",
@@ -464,7 +510,8 @@
       "price": 31.14,
       "liters": "313ml",
       "quantity": 150,
-      "id": 4
+      "id": 4,
+      "type": "boxe"
     }
   ],
   "users": [
@@ -472,20 +519,8 @@
       "id": 0,
       "username": "user 1",
       "password": "1234",
-      "cart": [
-        {
-          "beerId": 21,
-          "quantity": 1
-        },
-        {
-          "beerId": 22,
-          "quantity": 1
-        },
-        {
-          "beerId": 31,
-          "quantity": 1
-        }
-      ]
+      "cart": []
+
     }
   ]
 }

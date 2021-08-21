@@ -1,7 +1,6 @@
   import axios from "axios";
 import React, { Component } from "react";
 import { BiCart } from "react-icons/bi";
-import { Link } from "react-router-dom";
 import {
   Footer,
   LinkCart,
