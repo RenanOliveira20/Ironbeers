@@ -7,7 +7,7 @@ import Cart from "./components/Cart/Cart";
 import SingleCard from "./components/SingleCard";
 import apiBeers from "./api/api";
 import  Nav from './components/Navbar/Navbar';
-
+import UserForm from "./UserForm/Index";
 class App extends React.Component {
   state = {
     dados: [],
@@ -51,6 +51,7 @@ class App extends React.Component {
             render={(props) => <Cart {...props} data={this.state.cart}  />}
           />
           <Route path="/single-beer/:id" component={SingleCard} />
+          <Route path="/singIn" component={UserForm} />
         </Switch>
       </div>
     );
