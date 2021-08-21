@@ -1,8 +1,7 @@
 import React from "react";
 import api from "../../api/api";
-import { BiCart } from "react-icons/bi";
 import ListItem from "../ListCart/ListItem";
-import {Footer, LinkCart} from "./CartElements"
+import {Footer, LinkCart, MoneyTransfer, AddShoppingCart, AddItem} from "./CartElements"
 class Cart extends React.Component {
   state = {
     cart: []
@@ -39,8 +38,11 @@ class Cart extends React.Component {
             Quantity<br></br>
             <input type = 'number' value='0'/>
           </div>
+          <AddItem to = '/'>
+        add more items<AddShoppingCart/>
+        </AddItem>
           <LinkCart to = '/cart'>
-          Purchase<BiCart />
+          Close the account and pay <MoneyTransfer/>
           </LinkCart>
         </Footer>
       </div>
