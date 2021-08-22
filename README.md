@@ -2,7 +2,7 @@
 
 (Project Module 2 Ironhack)
 
- ![Start Screen](./components/images/logo.png)
+ ![Start Screen](./src/images/logo.png)
 
  Demo [HERE](drink20.herokuapp.com) **IROBEERS**
 
