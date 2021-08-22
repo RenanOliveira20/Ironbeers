@@ -4,7 +4,7 @@
 
  ![Start Screen](./images/logo.png)
 
- Click [HERE](drink20.herokuapp.com) **IROBEERS**
+ Demo [HERE](drink20.herokuapp.com) **IROBEERS**
 
 ### Introduction
 
