@@ -29,4 +29,4 @@ Thank you very much for this first module 🤓.
 
 ---
 **Developer:** ⌨️ with ❤️ by [Jhonatan Veras](https://github.com/jhonatanveras) 😊
-**Developer:** ⌨️ with ❤️ by [Jhonatan Veras](https://github.com/RenanOliveira20) 😊
+**Developer:** ⌨️ with ❤️ by [Renan Oliveira](https://github.com/RenanOliveira20) 😊
