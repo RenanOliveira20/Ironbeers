@@ -21,7 +21,7 @@ class Cart extends React.Component {
   componentDidMount = () => {
     this.getCart()
   }
-
+  
   render() {
     return (
       <div>
@@ -33,7 +33,7 @@ class Cart extends React.Component {
         <Footer>
           <div>
             Subtotal <br></br>
-            <span>R$ 0</span>
+            <span>R$ {''}</span>
           </div>
           <div>
             Quantity<br></br>

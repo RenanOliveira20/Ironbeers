@@ -42,8 +42,8 @@ class List extends Component {
             <Div>
             <Img src={this.state.beer.image} alt= {this.state.beer.name}/>
             <Span>{this.state.beer.name}</Span>   
-            <Span>R$ {this.state.beer.price}</Span>
-            <Span>{this.state.beer.quantity}</Span>
+            <Span>R$ {this.state.beer.price * this.state.input}</Span>
+            <Span>{this.state.beer.inventory}</Span>
             <Input type="number" min="0" value= {this.state.input} onChange = { this.handleImput}/>          
         </Div>
             <Trash onClick ={this.deleteItem} />

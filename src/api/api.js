@@ -3,7 +3,7 @@ import axios from "axios";
 class jsonApi {
   constructor() {
     this.api = axios.create({
-      baseURL: "http://localhost:8000",
+      baseURL: "https://api-drinks20.herokuapp.com",
     });
   }
   getBeers = async () => {
@@ -49,6 +49,17 @@ class jsonApi {
       throw Error(e);
     }
   };
+  handleQuantity = async (id, quantity, idUser) =>{
+    try {
+      const cart = await this.getCart(idUser);
+      let index = cart.findIndex((e) =>{
+        return e.beerId === id
+      })
+      if (index !== -1)return cart[index].quantity = quantity
+  }catch (e) {
+    throw Error(e);
+  }
+}
   deleteBeerCart = async (idBeer,idUser) => {
     try{
       const cart = await this.getCart(idUser);
