@@ -1,6 +1,7 @@
   import axios from "axios";
 import React, { Component } from "react";
 import { BiCart } from "react-icons/bi";
+import api from "../../api/api";
 import {
   Footer,
   LinkCart,
@@ -12,6 +13,7 @@ import {
 class SingleCard extends Component {
   state = {
     data: [],
+    quantity: 0
   };
   componentDidMount = () => {
     axios.get("https://api-drinks20.herokuapp.com/products").then((response) => {
@@ -20,9 +22,21 @@ class SingleCard extends Component {
       });
       this.setState({
         data: myDrink[0],
+        quantity:myDrink[0].quantity + 1
       });
+      console.log(this.state)
     });
   };
+  handleQuantity = (e) =>{
+    if(e.target.value > -1 ){
+    this.setState({
+      quantity: e.target.value
+    })}
+  }
+  addToCart =  async () =>{
+    await api.addBeerCart(this.state.data.id, 0,this.state.quantity);
+  }
+  
   render() {
     return (
       <div>
@@ -35,20 +49,20 @@ class SingleCard extends Component {
               {this.state.data.name} {this.state.data.liters}{" "}
             </h1>
             <h2>R$ {this.state.data.price}</h2>
-            <h3>Inventory: {this.state.data.quantity}</h3>
+            <h3>Inventory: {this.state.data.inventory}</h3>
           </Rigth>
         </Single>
 
         <Footer>
           <div>
             Subtotal <br></br>
-            <span>R$ 0</span>
+            <span>R$ {( this.state.data.price * this.state.quantity).toFixed(2)}</span>
           </div>
           <div>
             Quantity<br></br>
-            <input type = 'number' value='0'/>
+            <input type = 'number' value={this.state.quantity} onChange ={this.handleQuantity} />
           </div>
-          <LinkCart to = '/cart'>
+          <LinkCart to = '/cart' onClick={this.addToCart}>
             Add to Cart <BiCart />
           </LinkCart>
         </Footer>
