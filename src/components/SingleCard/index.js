@@ -22,7 +22,7 @@ class SingleCard extends Component {
       });
       this.setState({
         data: myDrink[0],
-        quantity:myDrink[0].quantity
+        quantity:myDrink[0].quantity + 1
       });
       console.log(this.state)
     });
@@ -34,7 +34,7 @@ class SingleCard extends Component {
     })}
   }
   addToCart =  async () =>{
-    api.addBeerCart(this.state.data.id, 0);
+    await api.addBeerCart(this.state.data.id, 0,this.state.quantity);
   }
   
   render() {
@@ -56,7 +56,7 @@ class SingleCard extends Component {
         <Footer>
           <div>
             Subtotal <br></br>
-            <span>R$ {this.state.data.price * this.state.quantity}</span>
+            <span>R$ {( this.state.data.price * this.state.quantity).toFixed(2)}</span>
           </div>
           <div>
             Quantity<br></br>
