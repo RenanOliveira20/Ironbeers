@@ -57,7 +57,6 @@ class Home extends Component {
       {width : 200, itemsToShow: 2},
       {width : 500, itemsToShow: 3},
       {width : 900  , itemsToShow: 4},
-      {width : 1100  , itemsToShow: 5}
     ]
     return (
       <div>
