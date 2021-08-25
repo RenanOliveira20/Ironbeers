@@ -4,7 +4,7 @@ import { BiCart } from "react-icons/bi";
 import api from "../../api/api";
 import {
   Footer,
-  LinkCart,
+  ButtonCart,
   Single,
   Rigth
 } from './styles'
@@ -28,7 +28,7 @@ class SingleCard extends Component {
     });
   };
   handleQuantity = (e) =>{
-    if(e.target.value > -1 ){
+    if(e.target.value > 0 ){
     this.setState({
       quantity: e.target.value
     })}
@@ -62,9 +62,9 @@ class SingleCard extends Component {
             Quantity<br></br>
             <input type = 'number' value={this.state.quantity} onChange ={this.handleQuantity} />
           </div>
-          <LinkCart to = '/cart' onClick={this.addToCart}>
+          <ButtonCart onClick={this.addToCart}>
             Add to Cart <BiCart />
-          </LinkCart>
+          </ButtonCart>
         </Footer>
       </div>
     );

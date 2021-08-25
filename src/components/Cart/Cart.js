@@ -26,7 +26,7 @@ class Cart extends React.Component {
       <div>
         <ul>
           {this.state.cart.map((beer, i) => {
-            return <ListItem key={i} data={beer} index={i} action = {this.getCart} />;
+            return <ListItem key={i} data={beer}  action = {this.getCart} />;
           })}
         </ul>
         <Footer>
