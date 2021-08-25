@@ -11,9 +11,9 @@ const validationSchema = yup.object().shape({
   address: yup.array(
     yup.object().shape({
       street: yup.string().required("this field is required"),
-      number: yup.number().required("this field is required")
+      number: yup.number().required("this field is required"),
     })
-  )
+  ),
 });
 
 const initialValues = {
@@ -22,26 +22,26 @@ const initialValues = {
   address: [
     {
       street: "",
-      number: 70
-    }
+      number: 70,
+    },
   ],
   options: "value 1",
   radio: "op3",
-  accept: true
+  accept: true,
 };
 
 const Controlled = () => {
   const {
     state: { touched, errors },
-    register
+    register,
   } = useForm({
     initialValues,
     validationSchema,
-    isControlled: true
+    isControlled: true,
   });
 
   return (
-    <div className="row formrow" >
+    <div className="row formrow">
       <div className="col-lg-6">
         <div className="form-group">
           <label>Nome</label>
@@ -85,9 +85,17 @@ const Controlled = () => {
               {touched.address?.[0].number && errors.address?.[0].number}
             </span>
           </div>
+            <div className="btn-group p-3 d-flex justify-content-center" role="group" aria-label="Basic example">
+              <button type="button" className="btn btn-primary m-1">
+              Register
+              </button>
+              <button type="button" className="btn btn-primary m-1">
+              Log in
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 

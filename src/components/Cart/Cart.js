@@ -35,7 +35,7 @@ class Cart extends React.Component {
             <span>R$ 0</span>
           </div>
           <div>
-            Quantity<br></br>
+          quantity of products<br></br>
             <input type = 'number' value='0'/>
           </div>
           <AddItem to = '/'>
