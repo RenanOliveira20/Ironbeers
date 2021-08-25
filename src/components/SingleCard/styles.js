@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const Single = styled.div`
    width :90%;
@@ -101,7 +100,7 @@ input{
 }
 
 `;
-export const LinkCart = styled(Link)`
+export const ButtonCart = styled.button`
     font-size: 25px;
     width: 30%;
     padding: 10px;

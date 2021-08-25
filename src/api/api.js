@@ -33,19 +33,15 @@ class jsonApi {
     }
   };
 
-  addBeerCart = async (idBeer, idUser, quantityBeer) => {
-    let quantityHave = () =>{
-      if (quantityBeer > 0)return quantityBeer
-      else return 1
-    }
-    try {
+  addBeerCart = async (idBeer, idUser, quantityBeer = 1) => {
+        try {
       const cart = await this.getCart(idUser);
       let index = cart.findIndex((e) =>{
         return e.beerId === idBeer
       })
       index !==-1 ?
-      cart[index].quantity += Number(quantityHave()) :
-      cart.push({ beerId: idBeer, quantity: Number(quantityHave())})
+      cart[index].quantity += quantityBeer :
+      cart.push({ beerId: idBeer, quantity: quantityBeer})
       
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       return result.data.cart;
@@ -53,16 +49,26 @@ class jsonApi {
       throw Error(e);
     }
   };
+  handleQuantity = async (id, quantity, idUser) =>{
+    try {
+      const cart = await this.getCart(idUser);
+      let index = cart.findIndex((e) =>{
+        return e.beerId === id
+      })
+      if (index !== -1)return cart[index].quantity = quantity
+  }catch (e) {
+    throw Error(e);
+  }
+}
   deleteBeerCart = async (idBeer,idUser) => {
     try{
       const cart = await this.getCart(idUser);
-      const index = cart.filter((e, index) => {
-        let indexbeer = '' 
-      if (e.beerId === idBeer) indexbeer = index
-      return indexbeer
+      const index = cart.findIndex((e) => {
+        return e.beerId === idBeer
             })
-      console.log (index, cart)
-      cart.splice(index, 1)
+            console.log ( 'antes',cart, idBeer)
+            cart.splice(index, 1)
+            console.log ('depois', cart)
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       return result.data.cart
     }catch (e){

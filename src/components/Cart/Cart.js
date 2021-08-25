@@ -20,19 +20,19 @@ class Cart extends React.Component {
   componentDidMount = () => {
     this.getCart()
   }
-
+  
   render() {
     return (
       <div>
         <ul>
           {this.state.cart.map((beer, i) => {
-            return <ListItem key={i} data={beer} index={i} action = {this.getCart} />;
+            return <ListItem key={i} data={beer}  action = {this.getCart} />;
           })}
         </ul>
         <Footer>
           <div>
             Subtotal <br></br>
-            <span>R$ 0</span>
+            <span>R$ {''}</span>
           </div>
           <div>
           quantity of products<br></br>
