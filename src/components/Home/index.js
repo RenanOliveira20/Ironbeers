@@ -42,7 +42,6 @@ class Home extends Component {
      let filteredBox = copy.filter((e) => {
       return e.type.toLowerCase().includes('boxe')
      })
-    console.log(copy)
     this.setState({
       beers: filteredBeer,
       vodkas: filteredVodka,

@@ -33,7 +33,7 @@ class jsonApi {
     }
   };
 
-  addBeerCart = async (idBeer, idUser, quantityBeer = 1) => {
+  addBeerCart = async (idBeer, idUser, priceBeverage, quantityBeer = 1) => {
         try {
       const cart = await this.getCart(idUser);
       let index = cart.findIndex((e) =>{
@@ -41,7 +41,7 @@ class jsonApi {
       })
       index !==-1 ?
       cart[index].quantity += quantityBeer :
-      cart.push({ beerId: idBeer, quantity: quantityBeer})
+      cart.push({ beerId: idBeer, quantity: quantityBeer, price:priceBeverage})
       
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       return result.data.cart;
@@ -55,7 +55,10 @@ class jsonApi {
       let index = cart.findIndex((e) =>{
         return e.beerId === id
       })
-      if (index !== -1)return cart[index].quantity = quantity
+      if (index !== -1) cart[index].quantity = quantity;
+      const result = await this.api.patch(`/users/${idUser}`, { cart });
+      console.log(result)
+      return result.data.cart;
   }catch (e) {
     throw Error(e);
   }

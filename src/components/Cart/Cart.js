@@ -4,7 +4,8 @@ import ListItem from "../ListCart/ListItem";
 import {Footer, LinkCart, MoneyTransfer, AddShoppingCart, AddItem} from "./CartElements"
 class Cart extends React.Component {
   state = {
-    cart: []
+    cart: [],
+    subtotal:[]
   }
   getCart = async () => {
     try {
@@ -16,9 +17,21 @@ class Cart extends React.Component {
     } catch (e) {
       console.log(e)
     }
+    this.handleSubtotal()
   }
   componentDidMount = () => {
     this.getCart()
+  }
+  handleSubtotal = async () =>{
+    let prices = [0];
+    if(this.state.cart.length > 0){
+      this.state.cart.map((e)=>{
+        return prices.push(e.price * e.quantity)
+      })
+    }
+    return this.setState({
+      subtotal: prices
+    })
   }
   
   render() {
@@ -26,13 +39,13 @@ class Cart extends React.Component {
       <div>
         <ul>
           {this.state.cart.map((beer, i) => {
-            return <ListItem key={i} data={beer}  action = {this.getCart} />;
+            return <ListItem key={i} data={beer}  action = {this.getCart} subtotal = {this.handleSubtotal} />;
           })}
         </ul>
         <Footer>
           <div>
             Subtotal <br></br>
-            <span>R$ {''}</span>
+            <span>R$ {this.state.subtotal.reduce((pre, cur)=> pre + cur , 0).toFixed(2)}</span>
           </div>
           <div>
             Quantity<br></br>

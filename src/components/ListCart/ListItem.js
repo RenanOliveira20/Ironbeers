@@ -32,7 +32,9 @@ class List extends Component {
     this.setState({
       input : e.target.value
     })
-    api.handleQuantity(this.props.data.beerId,this.state.input,0)
+    api.handleQuantity(this.props.data.beerId,Number (this.state.input) + 1,0)
+    console.log(this.state.input)
+    this.props.subtotal()
   }
   deleteItem = async () => {
     try {
@@ -51,7 +53,7 @@ class List extends Component {
             <Div>
             <Img src={this.state.beer.image} alt= {this.state.beer.name}/>
             <Span>{this.state.beer.name}</Span>   
-            <Span>R$ {this.state.beer.price * this.state.input}</Span>
+            <Span>R$ {(this.state.beer.price * this.state.input).toFixed(2)}</Span>
             <Span>{this.state.beer.inventory}</Span>
             <Input type="number" min="0" value= {this.state.input} onChange = { this.handleImput}/>          
         </Div>

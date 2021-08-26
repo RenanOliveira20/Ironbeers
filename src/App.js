@@ -8,6 +8,7 @@ import SingleCard from "./components/SingleCard";
 import apiBeers from "./api/api";
 import  Nav from './components/Navbar/Navbar';
 import UserForm from "./UserForm/Index";
+
 class App extends React.Component {
   state = {
     dados: [],
