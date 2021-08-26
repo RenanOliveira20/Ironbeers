@@ -48,7 +48,7 @@ class Cart extends React.Component {
             <span>R$ {this.state.subtotal.reduce((pre, cur)=> pre + cur , 0).toFixed(2)}</span>
           </div>
           <div>
-            Quantity<br></br>
+          quantity of products<br></br>
             <input type = 'number' value='0'/>
           </div>
           <AddItem to = '/'>

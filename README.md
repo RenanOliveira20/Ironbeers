@@ -6,7 +6,7 @@
  ![Start Screen](./src/images/logo.png)
 
 
- Demo [HERE](drink20.herokuapp.com) **IROBEERS**
+ Demo [HERE](https://drinks20.herokuapp.com) **IROBEERS**
 
 ### Introduction
 
@@ -27,7 +27,7 @@
 
 * I would like to thank the **Ironhack** school for the experience and learning that is provided to us.
 The teachers **Daniel K Albanez (DK)**, **Gabriel Sicuto** and **Júlia Foresti**, for the way that the content is presented in the classroom and the support of doubts inside and outside the classroom.
-Thank you very much for this first module 🤓.
+Thank you very much for this second module 🤓.
 
 ---
 **Developer:** ⌨️ with ❤️ by [Jhonatan Veras](https://github.com/jhonatanveras) 😊
