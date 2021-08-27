@@ -6,7 +6,6 @@ export const Div = styled.div`
   background-color: black;
   height:150px;
   color: white;
-  margin: 5px;
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -27,13 +26,13 @@ export const Div = styled.div`
 export const Li = styled.li`
   list-style: none;
   color: white;
-  margin: 30px;
   width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 15px;
-  padding: 30px 15px;
+  padding: 7px;
+  margin-right: 0;
   @media screen and (max-width: 768px) {
     margin: 5px;
     width: 100%;
@@ -47,17 +46,17 @@ export const Li = styled.li`
 
 export const Img = styled.img`
   width: auto;
-  height: 100px;
+  height:70px;
   margin-left: 30px;
   @media screen and (max-width: 768px) {
     width: auto;
-    height: 90px;
+    height: 50px;
     margin-left: 5px;
   }
 `;
 
 export const Span = styled.span`
-  font-size: 25px;
+  font-size: 20px;
   @media screen and (max-width: 768px) {
     font-size: 15px;
     justify-content: flex-start;
@@ -66,10 +65,12 @@ export const Span = styled.span`
 
 export const Trash = styled(FaTrash)`
   color: black;
-  width: 100px;
-  height: 100px;
-  margin: 30px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
   cursor: pointer;
+  margin-right: 50px;
   @media screen and (max-width: 768px) {
     color: black;
     width: 50px;

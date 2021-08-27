@@ -9,6 +9,7 @@ justify-content: space-evenly;
 div {
     background-color: black;
     width: 20%;
+    margin: 10px;
     color: white;
     padding: 10px;
     border-radius:15px ;
@@ -51,7 +52,9 @@ export const LinkCart = styled(Link)`
     color: white;
   }
 `
-;export const AddItem = styled(Link)`
+;
+
+export const AddItem = styled(Link)`
 font-size: 25px;
 width: 20%;
 padding: 10px;
