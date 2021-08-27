@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Carousel from "react-elastic-carousel";
-import api from "../../api/api";
 import Card from "../Card";
 import Footer from "../Footer/index";
 import "./style.css";
+import SearchItem from "../Search";
+
 class Home extends Component {
   state ={
-    allDrinks : null,
     beers: [],
     vodkas: [],
     whiskys: [],
@@ -16,17 +16,13 @@ class Home extends Component {
 
   async componentDidMount() {
     try {
-      const drinks = await api.getBeers();
-      this.setState({
-        allDrinks: drinks,
-      });
+      this.filterDrinks()
     } catch (e) {
       Error(e)
     }
-    this.filterDrinks()
   }
   filterDrinks = () =>{
-    let copy = [...this.state.allDrinks]
+    let copy = [...this.props.data]
     let filteredBeer = copy.filter((e) => {
       return e.type.toLowerCase().includes('beer')
      })
@@ -60,7 +56,20 @@ class Home extends Component {
       {width : 1700, itemsToShow: 6},
     ]
     return (
+      this.props.search?
       <div>
+        <ul>
+        {
+          this.props.data.map((e,i)=>{
+            console.log(e)
+            return <SearchItem data ={e}  key = {i} />
+          })
+        }
+        </ul>
+
+      </div>
+      :
+      <div> 
         <h1 className= 'tittle'>Beers</h1>
         <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.beers.map( e => {
@@ -98,7 +107,7 @@ class Home extends Component {
                 return <Card key = {e.id} data ={e}/>
               })
             }
-          </div>
+            </div>
         <Footer />
       </div>
     );

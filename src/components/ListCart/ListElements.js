@@ -46,17 +46,19 @@ export const Li = styled.li`
 `;
 
 export const Img = styled.img`
-  width: auto;
-  height: 100px;
-  margin-left: 30px;
+  width: 5%;
+  height: auto;
+  margin-left: 10px;
   @media screen and (max-width: 768px) {
-    width: auto;
-    height: 90px;
+    width: 5%;
+  height: auto;
     margin-left: 5px;
   }
 `;
 
 export const Span = styled.span`
+  width:20%;
+
   font-size: 25px;
   @media screen and (max-width: 768px) {
     font-size: 15px;
@@ -110,7 +112,7 @@ text-align:center;
   }
 `;
 export const ButtonUp = styled(AiOutlineCaretUp)` 
-margin-left: -100%;
+margin-left: -70%;
 width: 80px;
 height:80px;
 margin-bottom: -30%;
@@ -120,7 +122,7 @@ margin-bottom: -30%;
   }
 `;
 export const ButtonDown = styled(AiOutlineCaretDown)`
-margin-left: -100%;
+margin-left: -70%;
 width: 80px;
 height:80px;
 &:hover {

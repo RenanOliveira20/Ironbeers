@@ -14,6 +14,7 @@ class App extends React.Component {
     dados: [],
     erro: false,
     filtered: [],
+    haveFilter : false
   };
 
   async componentDidMount() {
@@ -31,11 +32,13 @@ class App extends React.Component {
   }
 
   handleOnSearch = (value) => {
+    let filter = value.length > 0 ? true : false
     let copyArray = [...this.state.dados];
     copyArray = copyArray.filter((e) => {
       return e.name.toLowerCase().includes(value.toLowerCase());
     });
     this.setState({
+      haveFilter: filter,
       filtered: copyArray,
     });
   };
@@ -44,12 +47,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-       <Nav action= {this.handleOnSearch}/>
+       <Nav action= {this.handleOnSearch} />
         <Switch>
-          <Route exact path="/"component = {Home}/>
+          <Route exact path="/"render={(props) => <Home {...props} search= {this.state.haveFilter}  data={this.state.filtered}  />}/>
           <Route
             path="/cart"
-            render={(props) => <Cart {...props} data={this.state.cart}  />}
+           component = {Cart}
           />
           <Route path="/single-beer/:id" component={SingleCard} />
           <Route path="/singIn" component={UserForm} />
