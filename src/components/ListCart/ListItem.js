@@ -28,12 +28,18 @@ class List extends Component {
       console.error(e)
     }
   }
-  handleImput = async (e) => {
+  handleUp = async () => {
     this.setState({
-      input: e.target.value
+      input: this.state.input + 1
     })
-    await apiBeers.handleQuantity(this.props.data.beerId, Number(this.state.input) + 1, 0)
+    await apiBeers.handleQuantityUp(this.props.data.beerId,0)
     this.props.action()
+  }
+  handleDown = async () =>{
+    this.setState({
+      input: this.state.input - 1
+    })
+    await apiBeers.handleQuantityDown(this.props.data.beerId, 0)
   }
   deleteItem = async () => {
     try {
@@ -57,8 +63,8 @@ class List extends Component {
               <Quantity>{this.state.input} </Quantity>
               <div className='quantity-cart-input'>
                 <div className='buttons-up-down'>
-                  <ButtonUp />
-                  <ButtonDown />
+                  <ButtonUp onClick={this.handleUp}/>
+                  <ButtonDown on onClick={this.handleDown} />
                 </div>
               </div>
             </Div>

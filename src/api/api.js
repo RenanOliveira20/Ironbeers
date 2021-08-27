@@ -49,19 +49,33 @@ class jsonApi {
       throw Error(e);
     }
   };
-  handleQuantity = async (id, quantity, idUser) =>{
+  handleQuantityUp = async (id, idUser) =>{
     try {
       const cart = await this.getCart(idUser);
       let index = cart.findIndex((e) =>{
         return e.beerId === id
       })
-      if (index !== -1) cart[index].quantity = quantity;
+      if (index !== -1) cart[index].quantity += 1 ;
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       console.log(result)
       return result.data.cart;
   }catch (e) {
     throw Error(e);
   }
+}
+handleQuantityDown = async (id, idUser) =>{
+  try {
+    const cart = await this.getCart(idUser);
+    let index = cart.findIndex((e) =>{
+      return e.beerId === id
+    })
+    if (index !== -1) cart[index].quantity -= 1 ;
+    const result = await this.api.patch(`/users/${idUser}`, { cart });
+    console.log(result)
+    return result.data.cart;
+}catch (e) {
+  throw Error(e);
+}
 }
   deleteBeerCart = async (idBeer,idUser) => {
     try{
