@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Div, Li, Img, Span, Trash, Input } from "./ListElements.js";
 import apiBeers from "../../api/api";
-import api from "../../api/api";
 
 class List extends Component {
   state = {
@@ -14,7 +13,8 @@ class List extends Component {
   };
   componentDidUpdate = (prevProps)=>{
     if(prevProps.data !== this.props.data){
-      this.getABeverage()
+      this.getABeverage();
+      
     }
   }
   getABeverage = async () =>{
@@ -28,13 +28,12 @@ class List extends Component {
         console.error(e)
     }
   }
-  handleImput = (e) => {
+  handleImput = async (e) => {
     this.setState({
       input : e.target.value
     })
-    api.handleQuantity(this.props.data.beerId,Number (this.state.input) + 1,0)
-    console.log(this.state.input)
-    this.props.subtotal()
+    await apiBeers.handleQuantity(this.props.data.beerId,Number (this.state.input) + 1,0)
+    this.props.action()
   }
   deleteItem = async () => {
     try {

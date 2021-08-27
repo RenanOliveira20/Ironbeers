@@ -5,7 +5,8 @@ import {Footer, LinkCart, MoneyTransfer, AddShoppingCart, AddItem} from "./CartE
 class Cart extends React.Component {
   state = {
     cart: [],
-    subtotal:[]
+    subtotal:[],
+    total:0
   }
   getCart = async () => {
     try {
@@ -22,30 +23,40 @@ class Cart extends React.Component {
   componentDidMount = () => {
     this.getCart()
   }
-  handleSubtotal = async () =>{
+  
+  handleSubtotal = async  () =>{
     let prices = [0];
     if(this.state.cart.length > 0){
       this.state.cart.map((e)=>{
         return prices.push(e.price * e.quantity)
       })
     }
-    return this.setState({
+    this.setState({
       subtotal: prices
     })
+    this.getResult()
   }
-  
+  getResult= ()=>{
+    let subtotal = this.state.subtotal.reduce((pre, cur)=> pre + cur , 0).toFixed(2)
+    console.log(subtotal)
+
+    this.setState({
+      total: subtotal
+    })
+    return subtotal
+  }
   render() {
     return (
       <div>
         <ul>
           {this.state.cart.map((beer, i) => {
-            return <ListItem key={i} data={beer}  action = {this.getCart} subtotal = {this.handleSubtotal} />;
+            return <ListItem key={i} data={beer}  action = {this.getCart} />;
           })}
         </ul>
         <Footer>
           <div>
             Subtotal <br></br>
-            <span>R$ {this.state.subtotal.reduce((pre, cur)=> pre + cur , 0).toFixed(2)}</span>
+            <span>R$ {this.state.total}</span>
           </div>
           <div>
           quantity of products<br></br>
