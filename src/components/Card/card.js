@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const DrinkImg = styled.img`
-    margin-top:10px;
+    margin-top:5px;
     height: 100%;
     width: auto;
     @media screen and (max-width: 375px){
@@ -11,10 +11,10 @@ export const DrinkImg = styled.img`
     }
 `;
 export const CardComponent = styled.div `
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: black;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
