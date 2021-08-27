@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { FaTrash } from "react-icons/fa";
+import {AiOutlineCaretUp, AiOutlineCaretDown} from 'react-icons/ai'
 
 export const Div = styled.div`
   background-color: black;
+  height:150px;
   color: white;
   margin: 5px;
   width: 85%;
@@ -81,7 +83,10 @@ export const Trash = styled(FaTrash)`
   }
 `;
 
-export const Input = styled.input`
+export const Quantity = styled.span`
+text-align:center;
+  background-color:white;
+  color:black;
   width: 80px;
   height: 50px;
   margin-inline-end: 2%;
@@ -90,6 +95,7 @@ export const Input = styled.input`
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+  margin-left:50px;
   @media screen and (max-width: 768px) {
   width: 35px;
   height: 25px;
@@ -103,3 +109,22 @@ export const Input = styled.input`
     color: black;
   }
 `;
+export const ButtonUp = styled(AiOutlineCaretUp)` 
+margin-left: -100%;
+width: 80px;
+height:80px;
+margin-bottom: -30%;
+&:hover {
+    transition: all 0.2s ease-in-out;
+    color: yellow;
+  }
+`;
+export const ButtonDown = styled(AiOutlineCaretDown)`
+margin-left: -100%;
+width: 80px;
+height:80px;
+&:hover {
+    transition: all 0.2s ease-in-out;
+    color: yellow;
+  }
+`

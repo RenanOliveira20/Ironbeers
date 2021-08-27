@@ -55,40 +55,43 @@ class Home extends Component {
       {width : 0, itemsToShow: 1},
       {width : 200, itemsToShow: 2},
       {width : 500, itemsToShow: 3},
-      {width : 900  , itemsToShow: 4}   
+      {width : 900  , itemsToShow: 4},
+      {width : 1300, itemsToShow: 5},  
+      {width : 1700, itemsToShow: 6},
     ]
     return (
       <div>
-        <h1>Beers</h1>
+        <h1 className= 'tittle'>Beers</h1>
         <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.beers.map( e => {
             return <Card key = {e.id} data ={e}/>
           })}
           </Carousel>
-          <h1>Vodkas</h1>
+          <h1 className= 'tittle'>Vodkas</h1>
           <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.vodkas.map( e => {
             return <Card key = {e.id} data ={e}/>
           })}
           </Carousel>
-          <h1>Whiskys</h1>
+          <h1 className= 'tittle'>Whiskys</h1>
           <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.whiskys.map( e => {
             return <Card key = {e.id} data ={e}/>
           })}
           </Carousel>
-          <h1>Gins</h1>
+          <h1 className= 'tittle'>Gins</h1>
           <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.gin.map( e => {
             return <Card key = {e.id} data ={e}/>
           })}
           </Carousel>
-          <h1>Liquors</h1>
+          <h1 className= 'tittle'>Liquors</h1>
           <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.gin.map( e => {
             return <Card key = {e.id} data ={e}/>
           })}
           </Carousel>
+          <h1 className= 'tittle'>Boxes</h1>
           <div className= 'boxes'>
             {
               this.state.boxes.map( e => {
