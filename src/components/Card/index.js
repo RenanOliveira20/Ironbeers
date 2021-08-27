@@ -14,13 +14,13 @@ class Card extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: props.data
+            data: props.data,
+            subtotalArray: []
         }
-        console.log(props.data)
     }
     handleToCart = () => {
-        let { id } = this.state.data
-        api.addBeerCart(id , 0)
+        let { id,price } = this.state.data;
+        api.addBeerCart(id , 0, price);
     }
     render() {
         return (
