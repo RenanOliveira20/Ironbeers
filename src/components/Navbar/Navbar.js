@@ -28,7 +28,7 @@ class Navbar extends React.Component {
 
     return (
       <>
-      <Nav>
+      <Nav className= "fixed-top container-fluid">
         <NavLink to="/">
           <Img to="/" src={logo} alt="logo"/>
         </NavLink>
