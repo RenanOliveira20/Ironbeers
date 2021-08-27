@@ -57,7 +57,7 @@ class Cart extends React.Component {
       <div className="m-3">
         <ul>
           {this.state.cart.map((beer, i) => {
-            return <ListItem key={i} data={beer} action={this.getCart} />;
+            return <ListItem key={i} data={beer} action={this.getCart} updateCart={this.props.getCart} />;
           })}
         </ul>
         <Footer>
@@ -65,9 +65,9 @@ class Cart extends React.Component {
             Subtotal <br></br>
             <span>R$ {this.state.total}</span>
           </div>
-          <div>
+          <div >
             quantity of products<br></br>
-            <input type="number" value="0" />
+            <input type="number" value={this.props.quantity} />
           </div>
           <AddItem to="/">
             add more items

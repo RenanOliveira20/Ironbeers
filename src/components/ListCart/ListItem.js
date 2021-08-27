@@ -45,6 +45,7 @@ class List extends Component {
     try {
       await apiBeers.deleteBeerCart(this.props.data.beerId, 0);
       this.props.action();
+      this.props.updateCart();
     } catch (error) {
 
     }
@@ -59,7 +60,7 @@ class List extends Component {
               <Img src={this.state.beer.image} alt={this.state.beer.name} />
               <Span>{this.state.beer.name}</Span>
               <Span>R$ {(this.state.beer.price * this.state.input).toFixed(2)}</Span>
-              <Span>{this.state.beer.inventory}</Span>
+              <Span> In stock: {this.state.beer.inventory}</Span>
               <Quantity>{this.state.input} </Quantity>
               <div className='quantity-cart-input'>
                 <div className='buttons-up-down'>

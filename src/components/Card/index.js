@@ -18,9 +18,10 @@ class Card extends Component {
       subtotalArray: [],
     };
   }
-  handleToCart = () => {
+  handleToCart = async () => {
     let { id, price } = this.state.data;
-    api.addBeerCart(id, 0, price);
+    await api.addBeerCart(id, 0, price);
+    this.props.getCart();
   };
   render() {
     return (

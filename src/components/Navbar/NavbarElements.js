@@ -59,7 +59,7 @@ export const Bars = styled(BiCart)`
   }
 `;
 
-export const QuantityCart = styled.a`
+export const QuantityCart = styled.span`
    cursor: pointer;
    color: white;
    font-size: 20px;
@@ -72,6 +72,11 @@ export const QuantityCart = styled.a`
   }
 `;
 
+export const CartLink = styled(Link)`
+text-decoration: none;
+
+`
+;
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;

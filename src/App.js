@@ -14,12 +14,12 @@ class App extends React.Component {
     dados: [],
     erro: false,
     filtered: [],
-    cart: [],
+    cartquantity: 0,
   };
 
   async componentDidMount() {
     try {
-      const navcart = await apiBeers.getCart(0);
+      this.getCart()
       const beers = await apiBeers.getBeers();
       this.setState({
         dados: beers,
@@ -42,16 +42,27 @@ class App extends React.Component {
     });
   };
 
+  getCart = async () => {
+    try {
+      const getCart = await apiBeers.getCart(0);
+      this.setState({
+        cartquantity: getCart.length,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   
   render() {
     return (
       <div>
-       <Nav action= {this.handleOnSearch} navbarcart={this.state.cart}/>
+       <Nav action= {this.handleOnSearch} quantity={this.state.cartquantity}/>
         <Switch>
-          <Route exact path="/"component = {Home}/>
+          <Route exact path="/" render={(props) => <Home {...props} getCart={this.getCart}/> }/>
           <Route
             path="/cart"
-            render={(props) => <Cart {...props} data={this.state.cart}  />}
+            render={(props) => <Cart {...props} getCart={this.getCart} quantity={this.state.cartquantity} />}
           />
           <Route path="/single-beer/:id" component={SingleCard} />
           <Route path="/singIn" component={UserForm} />

@@ -64,37 +64,37 @@ class Home extends Component {
         <h1 className="tittle">Beers</h1>
         <Carousel breakPoints={breakPoints} className="carousel">
           {this.state.beers.map((e) => {
-            return <Card key={e.id} data={e} />;
+            return <Card key={e.id} data={e} getCart={this.props.getCart} />;
           })}
         </Carousel>
         <h1 className="tittle">Vodkas</h1>
         <Carousel breakPoints={breakPoints} className="carousel">
           {this.state.vodkas.map((e) => {
-            return <Card key={e.id} data={e} />;
+            return <Card key={e.id} data={e} getCart={this.props.getCart} />;
           })}
         </Carousel>
         <h1 className="tittle">Whiskys</h1>
         <Carousel breakPoints={breakPoints} className="carousel">
           {this.state.whiskys.map((e) => {
-            return <Card key={e.id} data={e} />;
+            return <Card key={e.id} data={e} getCart={this.props.getCart}/>;
           })}
         </Carousel>
         <h1 className="tittle">Gins</h1>
         <Carousel breakPoints={breakPoints} className="carousel">
           {this.state.gin.map((e) => {
-            return <Card key={e.id} data={e} />;
+            return <Card key={e.id} data={e} getCart={this.props.getCart}/>;
           })}
         </Carousel>
         <h1 className="tittle">Liquors</h1>
         <Carousel breakPoints={breakPoints} className="carousel">
           {this.state.gin.map((e) => {
-            return <Card key={e.id} data={e} />;
+            return <Card key={e.id} data={e} getCart={this.props.getCart}/>;
           })}
         </Carousel>
         <h1 className="tittle">Boxes</h1>
         <div className="boxes">
           {this.state.boxes.map((e) => {
-            return <Card key={e.id} data={e} />;
+            return <Card key={e.id} data={e} getCart={this.props.getCart}/>;
           })}
         </div>
         <Footer />
