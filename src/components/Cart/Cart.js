@@ -1,56 +1,63 @@
 import React from "react";
 import api from "../../api/api";
 import ListItem from "../ListCart/ListItem";
-import {Footer, LinkCart, MoneyTransfer, AddShoppingCart, AddItem} from "./CartElements"
+import {
+  Footer,
+  LinkCart,
+  MoneyTransfer,
+  AddShoppingCart,
+  AddItem,
+} from "./CartElements";
 class Cart extends React.Component {
   state = {
     cart: [],
-    subtotal:[],
-    total:0
-  }
+    subtotal: [],
+    total: 0,
+  };
   getCart = async () => {
     try {
-
       const getCart = await api.getCart(0);
       this.setState({
-        cart: getCart
-      })
+        cart: getCart,
+      });
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
-    this.handleSubtotal()
-  }
+    this.handleSubtotal();
+  };
   componentDidMount = () => {
-    this.getCart()
-  }
-  
-  handleSubtotal = async  () =>{
+    this.getCart();
+  };
+
+  handleSubtotal = async () => {
     let prices = [0];
-    if(this.state.cart.length > 0){
-      this.state.cart.map((e)=>{
-        return prices.push(e.price * e.quantity)
-      })
+    if (this.state.cart.length > 0) {
+      this.state.cart.map((e) => {
+        return prices.push(e.price * e.quantity);
+      });
     }
     this.setState({
-      subtotal: prices
-    })
-    this.getResult()
-  }
-  getResult= ()=>{
-    let subtotal = this.state.subtotal.reduce((pre, cur)=> pre + cur , 0).toFixed(2)
-    console.log(subtotal)
+      subtotal: prices,
+    });
+    this.getResult();
+  };
+  getResult = () => {
+    let subtotal = this.state.subtotal
+      .reduce((pre, cur) => pre + cur, 0)
+      .toFixed(2);
+    console.log(subtotal);
 
     this.setState({
-      total: subtotal
-    })
-    return subtotal
-  }
+      total: subtotal,
+    });
+    return subtotal;
+  };
   render() {
     return (
-      <div className= "m-3">
+      <div className="m-3">
         <ul>
           {this.state.cart.map((beer, i) => {
-            return <ListItem key={i} data={beer}  action = {this.getCart} />;
+            return <ListItem key={i} data={beer} action={this.getCart} />;
           })}
         </ul>
         <Footer>
@@ -59,14 +66,15 @@ class Cart extends React.Component {
             <span>R$ {this.state.total}</span>
           </div>
           <div>
-          quantity of products<br></br>
-            <input type = 'number' value='0'/>
+            quantity of products<br></br>
+            <input type="number" value="0" />
           </div>
-          <AddItem to = '/'>
-        add more items<AddShoppingCart/>
-        </AddItem>
-          <LinkCart to = '/cart'>
-          Close the account and pay <MoneyTransfer/>
+          <AddItem to="/">
+            add more items
+            <AddShoppingCart />
+          </AddItem>
+          <LinkCart to="/cart">
+            Close the account and pay <MoneyTransfer />
           </LinkCart>
         </Footer>
       </div>

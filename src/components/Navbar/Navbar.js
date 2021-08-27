@@ -8,6 +8,7 @@ import {
   NavBtnLink,
   Img,
   Button,
+  QuantityCart,
 
 } from "./NavbarElements";
 import { Link } from "react-router-dom";
@@ -15,7 +16,8 @@ import logo from '../../images/logo.png'
 
 class Navbar extends React.Component {
   state = {
-    value:''
+    value:'',
+    cart: this.props.navbarcart,
   }
   handleSearch= async (event) => {
     await this.setState({
@@ -37,7 +39,7 @@ class Navbar extends React.Component {
           <Button type="submit" >Search</Button>
         </NavMenu>
         <Link to="/cart">
-        <Bars/> 
+        <QuantityCart> <Bars/> {this.state.cart.length}</QuantityCart> 
         </Link>       
         <NavBtn>
           <NavBtnLink to="/singIn">Sign In</NavBtnLink>

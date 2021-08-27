@@ -52,7 +52,23 @@ export const Bars = styled(BiCart)`
   height: 60px;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-    
+  }
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #256ce1;
+  }
+`;
+
+export const QuantityCart = styled.a`
+   cursor: pointer;
+   color: white;
+   font-size: 20px;
+   padding: 5px;
+  @media screen and (max-width: 768px) {
+  }
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #256ce1;
   }
 `;
 
