@@ -38,3 +38,6 @@
     transition: all 0.2s ease-in-out;
     color: yellow;
 } 
+.navbar-cart-quntity{
+    width: 100px;
+}

@@ -48,8 +48,8 @@ export const Button = styled.button`
 
 export const Bars = styled(BiCart)`
   color: #fff;
-  width: 50px;
-  height: 60px;
+  width: 50%;
+  height:auto;
   cursor: pointer;
   @media screen and (max-width: 768px) {
   }
@@ -60,10 +60,14 @@ export const Bars = styled(BiCart)`
 `;
 
 export const QuantityCart = styled.span`
+text-align: center;
    cursor: pointer;
    color: white;
    font-size: 20px;
-   padding: 5px;
+   padding: 5px 10px;
+   height: 100px;
+   background-color: red;
+   border-radius:50%;
   @media screen and (max-width: 768px) {
   }
   &:hover {

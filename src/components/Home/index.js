@@ -4,9 +4,11 @@ import Card from "../Card";
 import Footer from "../Footer/index";
 import "./style.css";
 import SearchItem from "../Search";
+import api from "../../api/api";
 
 class Home extends Component {
   state ={
+    allDrinks : [],
     beers: [],
     vodkas: [],
     whiskys: [],
@@ -16,13 +18,17 @@ class Home extends Component {
 
   async componentDidMount() {
     try {
-      this.filterDrinks()
+      let beverage = await api.getBeers()
+      this.setState({
+        allDrinks: beverage
+      })
+      this.filterDrinks();
     } catch (e) {
       Error(e);
     }
   }
   filterDrinks = () =>{
-    let copy = [...this.props.data]
+    let copy = [...this.state.allDrinks]
     let filteredBeer = copy.filter((e) => {
       return e.type.toLowerCase().includes("beer");
     });
@@ -62,7 +68,7 @@ class Home extends Component {
         {
           this.props.data.map((e,i)=>{
             console.log(e)
-            return <SearchItem data ={e}  key = {i} />
+            return <SearchItem data ={e}  key = {i} get = {this.props.getCart} />
           })
         }
         </ul>
@@ -73,7 +79,7 @@ class Home extends Component {
         <h1 className= 'tittle'>Beers</h1>
         <Carousel breakPoints = {breakPoints} className = 'carousel'>
           {this.state.beers.map( e => {
-            return <Card key = {e.id} data ={e}/>
+            return <Card key = {e.id} data ={e} getCart={this.props.getCart}/>
           })}
         </Carousel>
         <h1 className="tittle">Whiskys</h1>

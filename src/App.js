@@ -62,10 +62,10 @@ class App extends React.Component {
       <div>
        <Nav action= {this.handleOnSearch}  quantity={this.state.cartquantity}/>
         <Switch>
-          <Route exact path="/"render={(props) => <Home {...props} search= {this.state.haveFilter}  data={this.state.filtered}  />}/>
+          <Route exact path="/"render={(props) => <Home {...props} search= {this.state.haveFilter}  data={this.state.filtered} getCart={this.getCart}  />}/>
           <Route
             path="/cart"
-           component = {Cart}
+            render={(props) => <Cart {...props} getCart={this.getCart} quantity={this.state.cartquantity} />}
           />
           <Route path="/single-beer/:id" component={SingleCard} />
           <Route path="/singIn" component={UserForm} />
