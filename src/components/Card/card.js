@@ -13,6 +13,7 @@ export const DrinkImg = styled.img`
 export const CardComponent = styled.div `
     margin-top: 10px;
     background-color: black;
+    box-shadow: 10px 20px 30px 0 grey;
     width: 200px;
     height: 200px;
     display: flex;
@@ -62,8 +63,8 @@ height: 50%;
 `;
 export const CartButton = styled.button`
     width: 95%;
-    background-color: gold;
-    color: black;
+    background-color: #87CEFA;
+    color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     @media screen and (max-width: 375px){
