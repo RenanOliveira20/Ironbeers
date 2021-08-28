@@ -67,7 +67,7 @@ class App extends React.Component {
             path="/cart"
             render={(props) => <Cart {...props} getCart={this.getCart} quantity={this.state.cartquantity} />}
           />
-          <Route path="/single-beer/:id" component={SingleCard} />
+          <Route path="/single-beer/:id" render={(props) =><SingleCard getCart={this.getCart}/>} />
           <Route path="/singIn" component={UserForm} />
         </Switch>
       </div>

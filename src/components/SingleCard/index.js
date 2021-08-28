@@ -35,6 +35,7 @@ class SingleCard extends Component {
   }
   addToCart =  async () =>{
     await api.addBeerCart(this.state.data.id, 0,this.state.quantity);
+    this.props.getCart()
   }
   
   render() {
