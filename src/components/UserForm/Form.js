@@ -85,17 +85,21 @@ const Controlled = () => {
               {touched.address?.[0].number && errors.address?.[0].number}
             </span>
           </div>
-            <div className="btn-group p-3 d-flex justify-content-center" role="group" aria-label="Basic example">
-              <button type="button" className="btn btn-primary m-1">
+          <div
+            className="btn-group p-3 d-flex justify-content-center"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button type="button" className="btn btn-primary m-1">
               Register
-              </button>
-              <button type="button" className="btn btn-primary m-1">
+            </button>
+            <button type="button" className="btn btn-primary m-1">
               Log in
-              </button>
-            </div>
+            </button>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

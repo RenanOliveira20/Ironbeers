@@ -7,18 +7,20 @@ import Cart from "./components/Cart/Cart";
 import SingleCard from "./components/SingleCard";
 import apiBeers from "./api/api";
 import  Nav from './components/Navbar/Navbar';
-import UserForm from "./UserForm/Index";
+import UserForm from "./components/UserForm/Index";
 
 class App extends React.Component {
   state = {
     dados: [],
     erro: false,
     filtered: [],
+    cartquantity: 0,
     haveFilter : false
   };
 
   async componentDidMount() {
     try {
+      this.getCart()
       const beers = await apiBeers.getBeers();
       this.setState({
         dados: beers,
@@ -43,11 +45,22 @@ class App extends React.Component {
     });
   };
 
+  getCart = async () => {
+    try {
+      const getCart = await apiBeers.getCart(0);
+      this.setState({
+        cartquantity: getCart.length,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   
   render() {
     return (
       <div>
-       <Nav action= {this.handleOnSearch} />
+       <Nav action= {this.handleOnSearch}  quantity={this.state.cartquantity}/>
         <Switch>
           <Route exact path="/"render={(props) => <Home {...props} search= {this.state.haveFilter}  data={this.state.filtered}  />}/>
           <Route

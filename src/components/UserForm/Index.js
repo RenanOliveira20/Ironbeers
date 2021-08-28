@@ -6,17 +6,17 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import Controlled from "./Form";
 
 class UserForm extends React.Component {
-render(){
-  return (
-    <PerfectScrollbar>
-      <div className="container-fluid">
-        <div className="section">
-          <Controlled />
+  render() {
+    return (
+      <PerfectScrollbar>
+        <div className="container-fluid">
+          <div className="section">
+            <Controlled />
+          </div>
         </div>
-      </div>
-    </PerfectScrollbar>
-  );
-};
-};
+      </PerfectScrollbar>
+    );
+  }
+}
 
 export default UserForm;

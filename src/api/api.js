@@ -34,15 +34,19 @@ class jsonApi {
   };
 
   addBeerCart = async (idBeer, idUser, priceBeverage, quantityBeer = 1) => {
-        try {
+    try {
       const cart = await this.getCart(idUser);
-      let index = cart.findIndex((e) =>{
-        return e.beerId === idBeer
-      })
-      index !==-1 ?
-      cart[index].quantity += quantityBeer :
-      cart.push({ beerId: idBeer, quantity: quantityBeer, price:priceBeverage})
-      
+      let index = cart.findIndex((e) => {
+        return e.beerId === idBeer;
+      });
+      index !== -1
+        ? (cart[index].quantity += quantityBeer)
+        : cart.push({
+            beerId: idBeer,
+            quantity: quantityBeer,
+            price: priceBeverage,
+          });
+
       const result = await this.api.patch(`/users/${idUser}`, { cart });
       return result.data.cart;
     } catch (e) {
@@ -57,7 +61,7 @@ class jsonApi {
       })
       if (index !== -1) cart[index].quantity += 1 ;
       const result = await this.api.patch(`/users/${idUser}`, { cart });
-      console.log(result)
+      console.log(result);
       return result.data.cart;
   }catch (e) {
     throw Error(e);
@@ -81,17 +85,17 @@ handleQuantityDown = async (id, idUser) =>{
     try{
       const cart = await this.getCart(idUser);
       const index = cart.findIndex((e) => {
-        return e.beerId === idBeer
-            })
-            console.log ( 'antes',cart, idBeer)
-            cart.splice(index, 1)
-            console.log ('depois', cart)
+        return e.beerId === idBeer;
+      });
+      console.log("antes", cart, idBeer);
+      cart.splice(index, 1);
+      console.log("depois", cart);
       const result = await this.api.patch(`/users/${idUser}`, { cart });
-      return result.data.cart
-    }catch (e){
-      throw Error(e)
+      return result.data.cart;
+    } catch (e) {
+      throw Error(e);
     }
-  }
+  };
 }
 
 export default new jsonApi();
