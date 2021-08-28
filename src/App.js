@@ -8,6 +8,7 @@ import SingleCard from "./components/SingleCard";
 import apiBeers from "./api/api";
 import  Nav from './components/Navbar/Navbar';
 import UserForm from "./components/UserForm/Index";
+import Finalize from "./components/Finalize";
 
 class App extends React.Component {
   state = {
@@ -69,6 +70,7 @@ class App extends React.Component {
           />
           <Route path="/single-beer/:id" render={(props) =><SingleCard {...props} getCart={this.getCart}/>} />
           <Route path="/singIn" component={UserForm} />
+          <Route path="/bought" component={Finalize} />
         </Switch>
       </div>
     );

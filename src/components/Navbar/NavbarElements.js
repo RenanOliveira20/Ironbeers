@@ -48,7 +48,7 @@ export const Button = styled.button`
 
 export const Bars = styled(BiCart)`
   color: #fff;
-  width: 50%;
+  width: 50px;
   height:auto;
   cursor: pointer;
   @media screen and (max-width: 768px) {

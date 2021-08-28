@@ -38,6 +38,16 @@
     transition: all 0.2s ease-in-out;
     color: yellow;
 } 
-.navbar-cart-quntity{
-    width: 100px;
+.final-images{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.final-images > img {
+    width: 500px;
+    height: 500px;
+}
+.final{
+    text-align: center;
 }
