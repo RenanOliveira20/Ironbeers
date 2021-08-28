@@ -73,7 +73,7 @@ class Cart extends React.Component {
             add more items
             <AddShoppingCart />
           </AddItem>
-          <LinkCart to="/cart">
+          <LinkCart to="/bought">
             Close the account and pay <MoneyTransfer />
           </LinkCart>
         </Footer>
