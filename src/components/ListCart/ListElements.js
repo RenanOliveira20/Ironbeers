@@ -111,7 +111,7 @@ text-align:center;
   }
 `;
 export const ButtonUp = styled(AiOutlineCaretUp)` 
-margin-left: -100%;
+margin-left: -70%;
 width: 80px;
 height:80px;
 margin-bottom: -30%;
@@ -121,7 +121,7 @@ margin-bottom: -30%;
   }
 `;
 export const ButtonDown = styled(AiOutlineCaretDown)`
-margin-left: -100%;
+margin-left: -70%;
 width: 80px;
 height:80px;
 &:hover {

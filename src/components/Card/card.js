@@ -61,8 +61,8 @@ export const Price = styled.p`
 `;
 export const CartButton = styled.button`
   width: 95%;
-  background-color: gold;
-  color: black;
+  background-color: #87CEFA;
+  color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   @media screen and (max-width: 375px) {
