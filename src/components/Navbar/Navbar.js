@@ -39,7 +39,13 @@ class Navbar extends React.Component {
           <Button type="submit" >Search</Button>
         </NavMenu>
         <CartLink to="/cart">
-        <QuantityCart> <Bars/> {this.props.quantity}</QuantityCart> 
+        {  this.props.quantity > 0 ?
+        <div className= 'navbar-cart-quntity'>
+        <Bars/>
+        <QuantityCart>  {this.props.quantity}</QuantityCart>
+        </div> :
+        <Bars/>
+        }
         </CartLink>       
         <NavBtn>
           <NavBtnLink to="/singIn">Sign Up</NavBtnLink>
